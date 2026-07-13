@@ -91,17 +91,19 @@ export const create = mutation({
         createdAt: Date.now(),
       });
 
-      const lowStockSetting = await ctx.db.query("settings").withIndex("by_key", q => q.eq("key", "lowStockAlerts")).first();
-      const isLowStockAlertsEnabled = lowStockSetting?.value !== "false";
-
-      if (isLowStockAlertsEnabled && previousStock > variant.lowStockThreshold && newStock <= variant.lowStockThreshold) {
-        await ctx.scheduler.runAfter(0, api.email.sendLowStockAlert, {
-          productName: item.productName,
-          sku: item.sku,
-          remainingStock: newStock,
-          threshold: variant.lowStockThreshold,
-        });
+      if (
+        (previousStock > variant.lowStockThreshold && newStock <= variant.lowStockThreshold) ||
+        (previousStock > 0 && newStock === 0)
+      ) {
+        shouldTriggerFullReport = true;
       }
+    }
+
+    const lowStockSetting = await ctx.db.query("settings").withIndex("by_key", q => q.eq("key", "lowStockAlerts")).first();
+    const isLowStockAlertsEnabled = lowStockSetting?.value !== "false";
+
+    if (isLowStockAlertsEnabled && shouldTriggerFullReport) {
+      await ctx.scheduler.runAfter(0, api.email.sendFullStockReport, {});
     }
 
     // Update customer stats if attached

@@ -390,7 +390,7 @@ export function ProductsPage() {
             {products?.length === 0 && (
               <Button
                 variant="secondary"
-                onClick={async () => { setSeeding(true); try { await seedProducts({}); } finally { setSeeding(false); } }}
+                onClick={async () => { setSeeding(true); try { console.log("Seeding not available"); } finally { setSeeding(false); } }}
                 loading={seeding}
                 className="flex-1 sm:flex-none border-[#2C5F2D] text-[#2C5F2D]"
               >

@@ -57,6 +57,7 @@ export const create = mutation({
     notes: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
+    let shouldTriggerFullReport = false;
     // Validate stock and decrement atomically
     for (const item of args.items) {
       const variant = await ctx.db.get(item.variantId);

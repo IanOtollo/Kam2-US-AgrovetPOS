@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Dancing+Script:wght@600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1A2733;
+    background: #FFFFFF;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    min-height: 100vh;
+    background: #FFFFFF;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#2C5F2D] text-white h-10 px-4 rounded-md text-sm font-medium hover:bg-[#1B3E1C] active:scale-[0.98] transition-all duration-150 inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-[#E3DCC8] text-[#2C5F2D] h-10 px-4 rounded-md text-sm font-medium hover:bg-[#F7F3E9] active:scale-[0.98] transition-all duration-150 inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply bg-[#DC2626] text-white h-10 px-4 rounded-md text-sm font-medium hover:bg-[#b91c1c] active:scale-[0.98] transition-all duration-150 inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-[#5C6B5C] h-10 px-4 rounded-md text-sm font-medium hover:bg-[#E3DCC8] active:scale-[0.98] transition-all duration-150 inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-icon {
+    @apply h-9 w-9 rounded-md flex items-center justify-center hover:bg-[#E3DCC8] transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-base {
+    @apply h-10 px-3 border border-[#E3DCC8] rounded-md text-sm bg-white focus:border-[#2C5F2D] focus:ring-1 focus:ring-[#2C5F2D] outline-none transition-all duration-150 w-full text-[#2C5F2D] placeholder:text-[#5C6B5C];
+  }
+
+  .table-header {
+    @apply bg-[#E3DCC8] text-sm font-medium uppercase tracking-wider text-[#5C6B5C] h-10;
+  }
+
+  .table-row {
+    @apply h-12 border-b border-[#E3DCC8] hover:bg-[#F7F3E9] text-sm transition-colors duration-100;
+  }
+
+  .table-cell {
+    @apply px-4 py-2 align-middle;
+  }
+
+  .card {
+    @apply bg-white border border-[#E3DCC8] rounded-md p-4;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-sm font-medium bg-green-50 text-green-700 border border-green-200;
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-sm font-medium bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-sm font-medium bg-red-50 text-red-700 border border-red-200;
+  }
+
+  .badge-info {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200;
+  }
+
+  .badge-default {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-sm font-medium bg-[#E3DCC8] text-[#5C6B5C] border border-[#E3DCC8];
+  }
+
+  .section-label {
+    @apply text-sm font-medium uppercase tracking-wider text-[#5C6B5C];
+  }
+}
+
+/* Print styles for receipts */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .receipt-printable,
+  .receipt-printable * {
+    visibility: visible;
+  }
+
+  .receipt-printable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #000;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Scrollable tab container */
+.tab-scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.tab-scroll-container::-webkit-scrollbar { display: none; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F3E9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E3DCC8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5C6B5C;
+}

@@ -1,0 +1,666 @@
+import { useState, useEffect } from "react";
+import { useQuery, useMutation } from "convex/react";
+import { api } from "../../convex/_generated/api";
+import type { Id } from "../../convex/_generated/dataModel";
+import { AdminLayout } from "../components/layout/AdminLayout";
+import { Button } from "../components/ui/Button";
+import { Input } from "../components/ui/Input";
+import { Select } from "../components/ui/Select";
+import { Modal } from "../components/ui/Modal";
+import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from "../components/ui/Table";
+import { StatusBadge } from "../components/ui/Badge";
+import { Plus, RefreshCw, Pencil, Trash2, ShieldAlert, ShieldCheck } from "lucide-react";
+import { toast } from "sonner";
+import { useAuth } from "../hooks/useAuth";
+import { SkeletonForm, SkeletonTable } from "../components/ui/Skeleton";
+
+const SETTINGS_TABS = [
+  { key: "general", label: "General" },
+  { key: "receipt", label: "Receipt" },
+  { key: "payments", label: "Payments" },
+  { key: "catalogue", label: "Brands & Categories" },
+  { key: "users", label: "Users" },
+  { key: "security", label: "Security" },
+];
+
+export function SettingsPage() {
+  const [activeTab, setActiveTab] = useState("general");
+
+  return (
+    <AdminLayout title="Settings">
+      <div className="tab-scroll-container w-full mb-6">
+        <div style={{ display: "flex", minWidth: "max-content", borderBottom: "1px solid #E3DCC8" }}>
+          {SETTINGS_TABS.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              style={{
+                padding: "10px 16px",
+                fontSize: "14px",
+                fontWeight: activeTab === tab.key ? 600 : 400,
+                whiteSpace: "nowrap",
+                flexShrink: 0,
+                background: "none",
+                border: "none",
+                borderBottom: activeTab === tab.key ? "2px solid #2C5F2D" : "2px solid transparent",
+                cursor: "pointer",
+                color: activeTab === tab.key ? "#2C5F2D" : "#5C6B5C",
+                marginBottom: "-1px",
+                outline: "none",
+                transition: "color 150ms",
+              }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      {activeTab === "general" && <GeneralSettings />}
+      {activeTab === "receipt" && <ReceiptSettings />}
+      {activeTab === "payments" && <PaymentSettings />}
+      {activeTab === "catalogue" && <CatalogueSettings />}
+      {activeTab === "users" && <UserManagement />}
+      {activeTab === "security" && <SecuritySettings />}
+    </AdminLayout>
+  );
+}
+
+function GeneralSettings() {
+  const settings = useQuery(api.settings.getAll);
+  const setMultiple = useMutation(api.settings.setMultiple);
+  const [form, setForm] = useState({ shop_name: "", shop_phone: "", shop_address: "", tax_rate: "0.16", tax_inclusive: "true", low_stock_default: "1", lowStockAlerts: "true", saleAlerts: "true" });
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (settings) {
+      setForm({
+        shop_name: settings["shop_name"] ?? "",
+        shop_phone: settings["shop_phone"] ?? "",
+        shop_address: settings["shop_address"] ?? "",
+        tax_rate: settings["tax_rate"] ?? "0.16",
+        tax_inclusive: settings["tax_inclusive"] ?? "true",
+        low_stock_default: settings["low_stock_default"] ?? "1",
+        lowStockAlerts: settings["lowStockAlerts"] ?? "true",
+        saleAlerts: settings["saleAlerts"] ?? "true",
+      });
+    }
+  }, [settings]);
+
+  const handleSave = async () => {
+    setLoading(true);
+    try {
+      await setMultiple({ settings: Object.entries(form).map(([key, value]) => ({ key, value })) });
+      toast.success("Settings saved");
+    } catch {
+      toast.error("Failed to save settings");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!settings) return <SkeletonForm fields={6} />;
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="space-y-4">
+        <Input label="Shop Name" value={form.shop_name} onChange={(e) => setForm({ ...form, shop_name: e.target.value })} />
+        <Input label="Shop Phone" value={form.shop_phone} onChange={(e) => setForm({ ...form, shop_phone: e.target.value })} type="tel" />
+        <Input label="Shop Address" value={form.shop_address} onChange={(e) => setForm({ ...form, shop_address: e.target.value })} />
+      </div>
+      <div className="space-y-4">
+        <Input label="Tax Rate (e.g. 0.16 for 16%)" value={form.tax_rate} onChange={(e) => setForm({ ...form, tax_rate: e.target.value })} type="number" step="0.01" min="0" max="1" />
+        <Select
+          label="Tax Inclusive (prices include VAT)"
+          options={[{ value: "true", label: "Yes — prices include VAT" }, { value: "false", label: "No — VAT added on top" }]}
+          value={form.tax_inclusive}
+          onChange={(e) => setForm({ ...form, tax_inclusive: e.target.value })}
+        />
+        <Input label="Default Low Stock Threshold" value={form.low_stock_default} onChange={(e) => setForm({ ...form, low_stock_default: e.target.value })} type="number" min="1" />
+      </div>
+      <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Select
+          label="Low Stock Email Alerts"
+          options={[{ value: "true", label: "Enabled" }, { value: "false", label: "Disabled" }]}
+          value={form.lowStockAlerts}
+          onChange={(e) => setForm({ ...form, lowStockAlerts: e.target.value })}
+        />
+        <Select
+          label="Sale Completion Email Alerts"
+          options={[{ value: "true", label: "Enabled" }, { value: "false", label: "Disabled" }]}
+          value={form.saleAlerts}
+          onChange={(e) => setForm({ ...form, saleAlerts: e.target.value })}
+        />
+      </div>
+      <div className="md:col-span-2">
+        <Button onClick={handleSave} loading={loading}>Save Settings</Button>
+      </div>
+    </div>
+  );
+}
+
+function ReceiptSettings() {
+  const settings = useQuery(api.settings.getAll);
+  const setMultiple = useMutation(api.settings.setMultiple);
+  const [form, setForm] = useState({ receipt_footer: "", receipt_show_logo: "true" });
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (settings) {
+      setForm({
+        receipt_footer: settings["receipt_footer"] ?? "Thank you for shopping with us!",
+        receipt_show_logo: settings["receipt_show_logo"] ?? "true",
+      });
+    }
+  }, [settings]);
+
+  const handleSave = async () => {
+    setLoading(true);
+    try {
+      await setMultiple({ settings: Object.entries(form).map(([key, value]) => ({ key, value })) });
+      toast.success("Receipt settings saved");
+    } catch {
+      toast.error("Failed to save");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!settings) return <SkeletonForm fields={2} />;
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="space-y-4">
+        <Input label="Receipt Footer Message" value={form.receipt_footer} onChange={(e) => setForm({ ...form, receipt_footer: e.target.value })} />
+        <Select
+          label="Show Logo on Receipt"
+          options={[{ value: "true", label: "Yes" }, { value: "false", label: "No" }]}
+          value={form.receipt_show_logo}
+          onChange={(e) => setForm({ ...form, receipt_show_logo: e.target.value })}
+        />
+        <Button onClick={handleSave} loading={loading}>Save Receipt Settings</Button>
+      </div>
+      <div className="hidden md:block bg-[#F7F3E9] border border-[#E3DCC8] rounded-md p-4">
+        <p className="text-sm font-medium uppercase tracking-wider text-[#5C6B5C] mb-3">Receipt Preview</p>
+        <div className="font-mono text-xs text-[#5C6B5C] space-y-1 leading-relaxed">
+          <p className="font-semibold text-center text-[#2C5F2D]">RECEIPT</p>
+          <p className="text-center">— — — — — — — — —</p>
+          <p>Item 1 x2 .......... KSh 800</p>
+          <p>Item 2 x1 .......... KSh 450</p>
+          <p className="text-center">— — — — — — — — —</p>
+          <p className="font-semibold">Total ............. KSh 1,250</p>
+          <p>VAT (16%) ........... KSh 172</p>
+          <p className="text-center">— — — — — — — — —</p>
+          <p className="text-center text-[#5C6B5C] text-xs mt-2">{form.receipt_footer || "Thank you for shopping with us!"}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PaymentSettings() {
+  const settings = useQuery(api.settings.getAll);
+  const setMultiple = useMutation(api.settings.setMultiple);
+  const [form, setForm] = useState({ mpesa_shortcode: "", mpesa_passkey: "", mpesa_consumer_key: "", mpesa_consumer_secret: "", mpesa_environment: "sandbox" });
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (settings) {
+      setForm({
+        mpesa_shortcode: settings["mpesa_shortcode"] ?? "",
+        mpesa_passkey: settings["mpesa_passkey"] ?? "",
+        mpesa_consumer_key: settings["mpesa_consumer_key"] ?? "",
+        mpesa_consumer_secret: settings["mpesa_consumer_secret"] ?? "",
+        mpesa_environment: settings["mpesa_environment"] ?? "sandbox",
+      });
+    }
+  }, [settings]);
+
+  const handleSave = async () => {
+    setLoading(true);
+    try {
+      await setMultiple({ settings: Object.entries(form).map(([key, value]) => ({ key, value })) });
+      toast.success("Payment settings saved");
+    } catch {
+      toast.error("Failed to save");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!settings) return <SkeletonForm fields={5} />;
+
+  return (
+    <div className="space-y-4">
+      <div className="bg-amber-50 border border-amber-200 rounded-md p-3 text-sm text-amber-700">
+        M-Pesa credentials are stored securely and used only for STK push requests.
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Select
+          label="Environment"
+          options={[{ value: "sandbox", label: "Sandbox (Testing)" }, { value: "production", label: "Production (Live)" }]}
+          value={form.mpesa_environment}
+          onChange={(e) => setForm({ ...form, mpesa_environment: e.target.value })}
+        />
+        <Input label="Business Short Code" value={form.mpesa_shortcode} onChange={(e) => setForm({ ...form, mpesa_shortcode: e.target.value })} placeholder="174379" />
+        <Input label="Consumer Key" value={form.mpesa_consumer_key} onChange={(e) => setForm({ ...form, mpesa_consumer_key: e.target.value })} />
+        <Input label="Consumer Secret" value={form.mpesa_consumer_secret} onChange={(e) => setForm({ ...form, mpesa_consumer_secret: e.target.value })} type="password" />
+        <div className="md:col-span-2">
+          <Input label="Passkey" value={form.mpesa_passkey} onChange={(e) => setForm({ ...form, mpesa_passkey: e.target.value })} type="password" />
+        </div>
+      </div>
+      <Button onClick={handleSave} loading={loading}>Save Payment Settings</Button>
+    </div>
+  );
+}
+
+function UserManagement() {
+  const [showModal, setShowModal] = useState(false);
+  const [showPinReset, setShowPinReset] = useState<string | null>(null);
+  const [newPin, setNewPin] = useState("");
+  const [form, setForm] = useState({ name: "", email: "", phone: "", role: "cashier", pin: "" });
+  const [formError, setFormError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [editUser, setEditUser] = useState<{ _id: string; name: string; email: string; phone: string; role: string; isActive: boolean } | null>(null);
+  const [editError, setEditError] = useState("");
+
+  const { user: currentUser } = useAuth();
+  const users = useQuery(api.users.list);
+  const createUser = useMutation(api.users.create);
+  const updateUser = useMutation(api.users.update);
+  const toggleActive = useMutation(api.users.toggleActive);
+  const resetPin = useMutation(api.users.resetPin);
+
+  const handleCreate = async () => {
+    if (!form.name || !form.email || !form.pin || form.pin.length !== 4) {
+      setFormError("All fields are required. PIN must be 4 digits.");
+      return;
+    }
+    setLoading(true);
+    setFormError("");
+    try {
+      await createUser({
+        name: form.name,
+        email: form.email,
+        phone: form.phone || undefined,
+        role: form.role as "admin" | "cashier",
+        pin: form.pin,
+      });
+      setShowModal(false);
+      setForm({ name: "", email: "", phone: "", role: "cashier", pin: "" });
+    } catch (e: unknown) {
+      setFormError(e instanceof Error ? e.message : "Failed to create user");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleEdit = async () => {
+    if (!editUser) return;
+    if (!editUser.name.trim() || !editUser.email.trim()) {
+      setEditError("Name and email are required.");
+      return;
+    }
+    setLoading(true);
+    setEditError("");
+    try {
+      await updateUser({
+        id: editUser._id as Id<"users">,
+        name: editUser.name.trim(),
+        email: editUser.email.trim(),
+        phone: editUser.phone.trim() || undefined,
+        role: editUser.role as "admin" | "cashier",
+        isActive: editUser.isActive,
+      });
+      toast.success("User updated");
+      setEditUser(null);
+    } catch (e: unknown) {
+      setEditError(e instanceof Error ? e.message : "Failed to update user");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handlePinReset = async () => {
+    if (!showPinReset || newPin.length !== 4) return;
+    setLoading(true);
+    try {
+      await resetPin({ id: showPinReset as Id<"users">, newPin });
+      setShowPinReset(null);
+      setNewPin("");
+      toast.success("PIN reset successfully");
+    } catch {
+      toast.error("Failed to reset PIN");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!users) return <SkeletonTable rows={4} cols={5} />;
+
+  return (
+    <div>
+      <div className="flex justify-end mb-4">
+        <Button onClick={() => setShowModal(true)} className="w-full sm:w-auto"><Plus size={16} /> Add Staff Member</Button>
+      </div>
+
+      {/* Desktop table */}
+      <div className="hidden md:block bg-white border border-[#E3DCC8] rounded-md overflow-hidden">
+        <Table>
+          <TableHead>
+            <tr>
+              <TableHeader>Name</TableHeader>
+              <TableHeader>Email</TableHeader>
+              <TableHeader align="center">Role</TableHeader>
+              <TableHeader align="center">Status</TableHeader>
+              <TableHeader align="center">Actions</TableHeader>
+            </tr>
+          </TableHead>
+          <TableBody>
+            {users.map((u) => {
+              const isSelf = currentUser?._id === u._id;
+              return (
+                <TableRow key={u._id}>
+                  <TableCell><span className="font-medium">{u.name}</span></TableCell>
+                  <TableCell>{u.email}</TableCell>
+                  <TableCell align="center"><span className="capitalize">{u.role}</span></TableCell>
+                  <TableCell align="center"><StatusBadge status={u.isActive ? "active" : "inactive"} /></TableCell>
+                  <TableCell align="center">
+                    <div className="flex items-center justify-center gap-3">
+                      <button onClick={() => { setEditUser({ ...u, phone: u.phone ?? "" }); setEditError(""); }} className="text-sm text-[#2C5F2D] hover:underline flex items-center gap-1">
+                        <Pencil size={11} /> Edit
+                      </button>
+                      <button onClick={() => { setShowPinReset(u._id); setNewPin(""); }} className="text-sm text-[#2563EB] hover:underline flex items-center gap-1">
+                        <RefreshCw size={11} /> Reset PIN
+                      </button>
+                      {!isSelf && (
+                        <button
+                          onClick={() => toggleActive({ id: u._id as Id<"users">, isActive: !u.isActive, requestedBy: currentUser?._id as Id<"users"> })}
+                          className={`text-sm hover:underline ${u.isActive ? "text-[#DC2626]" : "text-[#16A34A]"}`}
+                        >
+                          {u.isActive ? "Deactivate" : "Activate"}
+                        </button>
+                      )}
+                      {isSelf && <span className="text-xs text-[#5C6B5C]">(you)</span>}
+                    </div>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
+
+      {/* Mobile cards */}
+      <div className="md:hidden space-y-3">
+        {users.map((u) => {
+          const isSelf = currentUser?._id === u._id;
+          return (
+            <div key={u._id} className="bg-white border border-[#E3DCC8] rounded-md p-4">
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0">
+                  <p className="font-medium text-sm">{u.name}{isSelf && <span className="ml-1.5 text-xs text-[#5C6B5C]">(You)</span>}</p>
+                  <p className="text-xs text-[#5C6B5C] mt-0.5">{u.email}</p>
+                  <p className="text-xs text-[#5C6B5C] capitalize mt-0.5">{u.role}</p>
+                </div>
+                <StatusBadge status={u.isActive ? "active" : "inactive"} />
+              </div>
+              <div className="flex gap-2 mt-3 pt-3 border-t border-[#E3DCC8]">
+                <button onClick={() => { setEditUser({ ...u, phone: u.phone ?? "" }); setEditError(""); }} className="flex-1 text-sm text-[#2C5F2D] py-1.5 border border-[#E3DCC8] rounded-md flex items-center justify-center gap-1">
+                  <Pencil size={12} /> Edit
+                </button>
+                <button onClick={() => { setShowPinReset(u._id); setNewPin(""); }} className="flex-1 text-sm text-[#2563EB] py-1.5 border border-[#E3DCC8] rounded-md flex items-center justify-center gap-1">
+                  <RefreshCw size={12} /> Reset PIN
+                </button>
+                {!isSelf && (
+                  <button
+                    onClick={() => toggleActive({ id: u._id as Id<"users">, isActive: !u.isActive, requestedBy: currentUser?._id as Id<"users"> })}
+                    className={`flex-1 text-sm py-1.5 border border-[#E3DCC8] rounded-md ${u.isActive ? "text-[#DC2626]" : "text-[#16A34A]"}`}
+                  >
+                    {u.isActive ? "Deactivate" : "Activate"}
+                  </button>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="Add Staff Member" maxWidth="sm">
+        <div className="space-y-3">
+          <Input label="Full Name *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} autoFocus />
+          <Input label="Email *" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} type="email" />
+          <Input label="Phone (optional)" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} type="tel" />
+          <Select label="Role *" options={[{ value: "cashier", label: "Attendant" }, { value: "admin", label: "Admin" }]} value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value })} />
+          <Input label="4-Digit PIN *" value={form.pin} onChange={(e) => setForm({ ...form, pin: e.target.value.replace(/\D/g, "").slice(0, 4) })} type="password" placeholder="••••" maxLength={4} />
+          {formError && <p className="text-sm text-[#DC2626]">{formError}</p>}
+          <div className="flex gap-2 pt-2">
+            <Button variant="secondary" onClick={() => setShowModal(false)} className="flex-1">Cancel</Button>
+            <Button onClick={handleCreate} loading={loading} className="flex-1">Add Staff</Button>
+          </div>
+        </div>
+      </Modal>
+
+      <Modal isOpen={!!showPinReset} onClose={() => setShowPinReset(null)} title="Reset PIN" maxWidth="sm">
+        <div className="space-y-3">
+          <Input label="New 4-Digit PIN" value={newPin} onChange={(e) => setNewPin(e.target.value.replace(/\D/g, "").slice(0, 4))} type="password" placeholder="••••" maxLength={4} autoFocus />
+          <div className="flex gap-2 pt-2">
+            <Button variant="secondary" onClick={() => setShowPinReset(null)} className="flex-1">Cancel</Button>
+            <Button onClick={handlePinReset} loading={loading} disabled={newPin.length !== 4} className="flex-1">Reset PIN</Button>
+          </div>
+        </div>
+      </Modal>
+
+      <Modal isOpen={!!editUser} onClose={() => setEditUser(null)} title="Edit User" maxWidth="sm">
+        {editUser && (
+          <div className="space-y-3">
+            <Input label="Full Name *" value={editUser.name} onChange={(e) => setEditUser({ ...editUser, name: e.target.value })} autoFocus />
+            <Input label="Email *" value={editUser.email} onChange={(e) => setEditUser({ ...editUser, email: e.target.value })} type="email" />
+            <Input label="Phone (optional)" value={editUser.phone} onChange={(e) => setEditUser({ ...editUser, phone: e.target.value })} type="tel" />
+            <Select label="Role *" options={[{ value: "cashier", label: "Attendant" }, { value: "admin", label: "Admin" }]} value={editUser.role} onChange={(e) => setEditUser({ ...editUser, role: e.target.value })} />
+            {editError && <p className="text-sm text-[#DC2626]">{editError}</p>}
+            <div className="flex gap-2 pt-2">
+              <Button variant="secondary" onClick={() => setEditUser(null)} className="flex-1">Cancel</Button>
+              <Button onClick={handleEdit} loading={loading} className="flex-1">Save Changes</Button>
+            </div>
+          </div>
+        )}
+      </Modal>
+    </div>
+  );
+}
+
+function CatalogueSettings() {
+  const brands = useQuery(api.brands.list, { activeOnly: false });
+  const categories = useQuery(api.categories.list, { activeOnly: false });
+  const createBrand = useMutation(api.brands.create);
+  const removeBrand = useMutation(api.brands.remove);
+  const createCategory = useMutation(api.categories.create);
+  const removeCategory = useMutation(api.categories.remove);
+
+  const [newBrand, setNewBrand] = useState("");
+  const [newCategory, setNewCategory] = useState("");
+  const [addingBrand, setAddingBrand] = useState(false);
+  const [addingCategory, setAddingCategory] = useState(false);
+
+  const handleAddBrand = async () => {
+    if (!newBrand.trim()) return;
+    setAddingBrand(true);
+    try { await createBrand({ name: newBrand.trim() }); setNewBrand(""); toast.success("Brand added"); }
+    catch { toast.error("Failed to add brand"); }
+    finally { setAddingBrand(false); }
+  };
+
+  const handleAddCategory = async () => {
+    if (!newCategory.trim()) return;
+    setAddingCategory(true);
+    try { await createCategory({ name: newCategory.trim() }); setNewCategory(""); toast.success("Category added"); }
+    catch { toast.error("Failed to add category"); }
+    finally { setAddingCategory(false); }
+  };
+
+  const handleRemoveBrand = async (id: string) => {
+    await removeBrand({ id: id as Id<"brands"> });
+    toast.success("Brand deleted");
+  };
+
+  const handleRemoveCategory = async (id: string) => {
+    await removeCategory({ id: id as Id<"categories"> });
+    toast.success("Category deleted");
+  };
+
+  if (!brands || !categories) return <SkeletonTable rows={5} cols={3} />;
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Brands */}
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-[#5C6B5C] mb-3">Brands</p>
+        <div className="flex gap-2 mb-3">
+          <input
+            value={newBrand}
+            onChange={(e) => setNewBrand(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleAddBrand()}
+            placeholder="New brand name..."
+            className="input-base flex-1"
+          />
+          <Button onClick={handleAddBrand} loading={addingBrand} disabled={!newBrand.trim()}>
+            <Plus size={14} /> Add
+          </Button>
+        </div>
+        <div className="bg-white border border-[#E3DCC8] rounded-md overflow-hidden">
+          {brands.length === 0 ? (
+            <p className="text-sm text-[#5C6B5C] p-4">No brands yet.</p>
+          ) : (
+            brands.map((b) => (
+              <div key={b._id} className="flex items-center justify-between px-4 py-2.5 border-b border-[#E3DCC8] last:border-0">
+                <span className="text-sm font-medium text-[#2C5F2D]">{b.name}</span>
+                <button
+                  onClick={() => handleRemoveBrand(b._id)}
+                  className="flex items-center gap-1 text-sm px-2 py-1 rounded text-[#DC2626] hover:bg-red-50 transition-colors"
+                >
+                  <Trash2 size={12} /> Delete
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+
+      {/* Categories */}
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-[#5C6B5C] mb-3">Categories</p>
+        <div className="flex gap-2 mb-3">
+          <input
+            value={newCategory}
+            onChange={(e) => setNewCategory(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleAddCategory()}
+            placeholder="New category name..."
+            className="input-base flex-1"
+          />
+          <Button onClick={handleAddCategory} loading={addingCategory} disabled={!newCategory.trim()}>
+            <Plus size={14} /> Add
+          </Button>
+        </div>
+        <div className="bg-white border border-[#E3DCC8] rounded-md overflow-hidden">
+          {categories.length === 0 ? (
+            <p className="text-sm text-[#5C6B5C] p-4">No categories yet.</p>
+          ) : (
+            categories.map((c) => (
+              <div key={c._id} className="flex items-center justify-between px-4 py-2.5 border-b border-[#E3DCC8] last:border-0">
+                <span className="text-sm font-medium text-[#2C5F2D]">{c.name}</span>
+                <button
+                  onClick={() => handleRemoveCategory(c._id)}
+                  className="flex items-center gap-1 text-sm px-2 py-1 rounded text-[#DC2626] hover:bg-red-50 transition-colors"
+                >
+                  <Trash2 size={12} /> Delete
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SecuritySettings() {
+  const stats = useQuery(api.auth.getLoginAttemptStats);
+  const clearAttempts = useMutation(api.auth.clearLoginAttempts);
+  const [clearing, setClearing] = useState(false);
+  const [countdown, setCountdown] = useState(0);
+
+  useEffect(() => {
+    if (!stats?.lockedUntil) { setCountdown(0); return; }
+    const tick = () => setCountdown(Math.max(0, stats.lockedUntil! - Date.now()));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [stats?.lockedUntil]);
+
+  const fmt = (ms: number) => {
+    const m = Math.floor(ms / 60000);
+    const s = Math.floor((ms % 60000) / 1000);
+    return `${m}m ${s}s`;
+  };
+
+  const handleClear = async () => {
+    setClearing(true);
+    try {
+      const r = await clearAttempts({});
+      toast.success(`Cleared ${r.cleared} login records — terminal unlocked`);
+    } finally {
+      setClearing(false);
+    }
+  };
+
+  const isLocked = !!stats?.lockedUntil && countdown > 0;
+
+  return (
+    <div className="max-w-lg space-y-6">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-[#5C6B5C] mb-3">Brute-Force Protection</p>
+        <div className={`rounded-md border p-4 ${isLocked ? "border-red-200 bg-red-50" : "border-[#E3DCC8] bg-white"}`}>
+          <div className="flex items-center gap-3 mb-3">
+            {isLocked
+              ? <ShieldAlert size={22} className="text-[#DC2626] flex-shrink-0" />
+              : <ShieldCheck size={22} className="text-[#16A34A] flex-shrink-0" />
+            }
+            <div>
+              <p className="text-sm font-semibold text-[#2C5F2D]">
+                {isLocked ? "Terminal Currently Locked" : "Terminal Active"}
+              </p>
+              <p className="text-xs text-[#5C6B5C]">
+                {isLocked ? `Unlocks in ${fmt(countdown)}` : "No active lockout"}
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3 text-sm mb-4">
+            <div className="bg-[#F7F3E9] rounded p-3">
+              <p className="text-xs text-[#5C6B5C]">Failed attempts (15 min)</p>
+              <p className="text-xl font-bold font-mono text-[#2C5F2D] mt-0.5">
+                {stats?.failures ?? "—"} <span className="text-sm font-normal text-[#5C6B5C]">/ {stats?.maxFailures}</span>
+              </p>
+            </div>
+            <div className="bg-[#F7F3E9] rounded p-3">
+              <p className="text-xs text-[#5C6B5C]">Successful logins (15 min)</p>
+              <p className="text-xl font-bold font-mono text-[#2C5F2D] mt-0.5">{stats?.successes ?? "—"}</p>
+            </div>
+          </div>
+          <div className="text-xs text-[#5C6B5C] space-y-0.5 mb-4">
+            <p>• Locks after <strong className="text-[#2C5F2D]">{stats?.maxFailures} failed attempts</strong> within {stats?.windowMinutes} minutes</p>
+            <p>• Lockout lasts <strong className="text-[#2C5F2D]">{stats?.lockoutMinutes} minutes</strong> then auto-unlocks</p>
+            <p>• Enforced server-side — bypassing the UI has no effect</p>
+          </div>
+          <Button
+            variant="secondary"
+            onClick={handleClear}
+            loading={clearing}
+            className="w-full text-sm"
+          >
+            Reset Login Attempts & Unlock Terminal
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}

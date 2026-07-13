@@ -1,0 +1,832 @@
+[
+  {
+    "category": "Seeds,Feeds,Fertilisers,Insecticide,Fungicide,Foliar and Public Health",
+    "products": [
+      {
+        "name": "Green Crop Booster",
+        "variants": [
+          { "package": "500ml", "sellingPrice": 100, "stockQty": 18, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "1ltr", "sellingPrice": 150, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "5 ltrs", "sellingPrice": 300, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "CBD Crop Booster",
+        "variants": [
+          { "package": "500ml", "sellingPrice": 110, "stockQty": 12, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "1ltr", "sellingPrice": 160, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "5lts", "sellingPrice": 300, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Duduthrin 1.75 SEC",
+        "variants": [
+          { "package": "50ml", "sellingPrice": 150, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Halothrin",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 180, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Alphaguard",
+        "variants": [
+          { "package": "50mls", "sellingPrice": 110, "stockQty": 13, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Poultry Microbes",
+        "variants": [
+          { "package": "500ml", "sellingPrice": 150, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "1litres", "sellingPrice": 250, "stockQty": 7, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Collards 10g Royal Advanta",
+        "variants": [
+          { "package": "10g", "sellingPrice": 80, "stockQty": 20, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Collards 25g Royal Sukumawiki",
+        "variants": [
+          { "package": "25g", "sellingPrice": 120, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Collards 50g Advanta",
+        "variants": [
+          { "package": "50g", "sellingPrice": 160, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Spinach Simlaw",
+        "variants": [
+          { "package": "10g", "sellingPrice": 70, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "25g", "sellingPrice": 160, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Simlaw Dhania",
+        "variants": [
+          { "package": "50g", "sellingPrice": 150, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "25g", "sellingPrice": 80, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Simlaw Saga",
+        "variants": [
+          { "package": "25g", "sellingPrice": 140, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Chick and Duckling Crumbs",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 4150, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "50kg", "sellingPrice": 4150, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Fast Grow Finisher Pellets (UNGA)",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 4300, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Growers Mash (UNGA)",
+        "variants": [
+          { "package": "10kg", "sellingPrice": 800, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Growers Mash (UNGA)@ 80/= per kg",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 80, "stockQty": 49, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Kale 1000 Headed Royal",
+        "variants": [
+          { "package": "10g", "sellingPrice": 80, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "50g", "sellingPrice": 220, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Microp Planting",
+        "variants": [
+          { "package": "25kg", "sellingPrice": 2850, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "50kg", "sellingPrice": 5700, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "DAP Falcon (@160/= per Kg)",
+        "variants": [
+          { "package": "10kg", "sellingPrice": 1450, "stockQty": 6, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "DAP Falcon",
+        "variants": [
+          { "package": "10kg", "sellingPrice": 1450, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "25kg", "sellingPrice": 3400, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Gradometer",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 250, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "50ml", "sellingPrice": 160, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Confidor WG 70",
+        "variants": [
+          { "package": "15g", "sellingPrice": 250, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Bamako 1097",
+        "variants": [
+          { "package": "5g", "sellingPrice": 150, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Diazole Agrichem",
+        "variants": [
+          { "package": "25ml", "sellingPrice": 100, "stockQty": 17, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Bedlam 200 SL",
+        "variants": [
+          { "package": "15ml", "sellingPrice": 120, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "CBDP Crop Booster",
+        "variants": [
+          { "package": "500 mls", "sellingPrice": 80, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Easy Grow Starter Crumps",
+        "variants": [
+          { "package": "120g", "sellingPrice": 90, "stockQty": 7, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "250g", "sellingPrice": 140, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Easy Grow Vegetative",
+        "variants": [
+          { "package": "250g", "sellingPrice": 140, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "120G", "sellingPrice": 100, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Easy Grow F/F",
+        "variants": [
+          { "package": "120g", "sellingPrice": 100, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "250g", "sellingPrice": 160, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Finisher Pellets UNGA",
+        "variants": [
+          { "package": "10kgs", "sellingPrice": 1000, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Kienyeji Mash Royal",
+        "variants": [
+          { "package": "10kg", "sellingPrice": 600, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "20kg", "sellingPrice": 1100, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "70kg", "sellingPrice": 3050, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "50kg", "sellingPrice": 3500, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "S-Dime",
+        "variants": [
+          { "package": "125ml", "sellingPrice": 250, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ultramix Maziwa Block",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 360, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ultramix Maziwa",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 220, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Cattlephos Bricks",
+        "variants": [
+          { "package": "1kg", "sellingPrice": 160, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Maclik Bricks( Mineral Brick 2kg Cooper)",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 350, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Managu Continental",
+        "variants": [
+          { "package": "50g", "sellingPrice": 270, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Managu Giant Simlaw",
+        "variants": [
+          { "package": "50g", "sellingPrice": 200, "stockQty": 6, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Chick Mash",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 3950, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Yara CAN Extran Fertilizer (100/= per kg)",
+        "variants": [
+          { "package": "10kg", "sellingPrice": 780, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Yara CAN Extran Fertilizer (90/= per kg)",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 3500, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Kienyeji Mash (50kg at 70/= per kg)",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 70, "stockQty": 8, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Chick and Duckling Mash (Fugo) -UNGA (@100 per kg)",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 100, "stockQty": 41.5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Broiler Starter Crumbs (Faida)",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 4500, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Chick and Duckling Mash - (Fugo) UNGA",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 3950, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "EA Collards Sukuma Wiki",
+        "variants": [
+          { "package": "50g", "sellingPrice": 120, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Simlaw Managu",
+        "variants": [
+          { "package": "10g", "sellingPrice": 80, "stockQty": 13, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "50g", "sellingPrice": 200, "stockQty": 7, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Chick and Duckling Crumbs (@ 120/= per kg)",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 120, "stockQty": 27, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Growers Mash (UNGA) (50kg at 100/= per kg)",
+        "variants": [
+          { "package": "50kg", "sellingPrice": 100, "stockQty": 49, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Growers Mash (UNGA) (10kg at 100/= per kg)",
+        "variants": [
+          { "package": "20kg", "sellingPrice": 70, "stockQty": 19, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Finisher Pellets UNGA (100/= per kg)",
+        "variants": [
+          { "package": "50kgs", "sellingPrice": 100, "stockQty": 27, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Aminika Western Seed WH 403",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 900, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Tsavo Seeds Hybrid WE",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 1000, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Duma 43 Seed",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 900, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "WSL Tunza Bag",
+        "variants": [
+          { "package": "90kg", "sellingPrice": 250, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Trimoxol Vet",
+        "variants": [
+          { "package": "30g", "sellingPrice": 120, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Gumboro 50 Doses (Life Techonology)",
+        "variants": [
+          { "package": "50 doses", "sellingPrice": 250, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dewormers, Insecticides, Pesticides and Poultry Equipment",
+    "products": [
+      {
+        "name": "Duodip 55% EC",
+        "variants": [
+          { "package": "20ml", "sellingPrice": 180, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Sypertix",
+        "variants": [
+          { "package": "20ml", "sellingPrice": 120, "stockQty": 11, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Kaolin Laibuta",
+        "variants": [
+          { "package": "100g", "sellingPrice": 70, "stockQty": 6, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ex Kupe",
+        "variants": [
+          { "package": "20ml", "sellingPrice": 100, "stockQty": 10, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Levafas Extra",
+        "variants": [
+          { "package": "40ml", "sellingPrice": 160, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Dabendazole 2.5% Dawa",
+        "variants": [
+          { "package": "120ml", "sellingPrice": 50, "stockQty": 8, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "500mls", "sellingPrice": 120, "stockQty": 9, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Eye Wound Powder Metrocycline",
+        "variants": [
+          { "package": "25g", "sellingPrice": 110, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Cetrino Antiseptic Cream",
+        "variants": [
+          { "package": "24g", "sellingPrice": 160, "stockQty": 7, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Wormitrex",
+        "variants": [
+          { "package": "125ml", "sellingPrice": 80, "stockQty": 9, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Sevin Dudu Dust",
+        "variants": [
+          { "package": "50g", "sellingPrice": 80, "stockQty": 17, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "100g", "sellingPrice": 130, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "200g", "sellingPrice": 150, "stockQty": 8, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Trevin Dudu Dust",
+        "variants": [
+          { "package": "100g", "sellingPrice": 100, "stockQty": 16, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Capo-Vit Liquid",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 150, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "WSL Chlorine Powder",
+        "variants": [
+          { "package": "100g", "sellingPrice": 100, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Drinkers Pharmplan",
+        "variants": [
+          { "package": "1 lts", "sellingPrice": 230, "stockQty": 19, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "1.5lts", "sellingPrice": 200, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "3.5lts", "sellingPrice": 350, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Feeder Pharmplan",
+        "variants": [
+          { "package": "1.5kg", "sellingPrice": 240, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "3.5kg", "sellingPrice": 370, "stockQty": 7, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Pigeon Hole Feeder",
+        "variants": [
+          { "package": "Big", "sellingPrice": 200, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "Small", "sellingPrice": 120, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "DK 8031",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 900, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "DK 777",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 1000, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "DK 7500 Yellow Maize",
+        "variants": [
+          { "package": "2kg", "sellingPrice": 1100, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Chick Start Vetcare",
+        "variants": [
+          { "package": "30g", "sellingPrice": 80, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Egocin Chick Formula",
+        "variants": [
+          { "package": "25g", "sellingPrice": 70, "stockQty": 6, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "100g", "sellingPrice": 150, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Vetoxy 20%",
+        "variants": [
+          { "package": "25g", "sellingPrice": 90, "stockQty": 10, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Cosmycin 20%",
+        "variants": [
+          { "package": "30g", "sellingPrice": 120, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Cosatrim Vet",
+        "variants": [
+          { "package": "30g", "sellingPrice": 150, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Cosvita",
+        "variants": [
+          { "package": "30g", "sellingPrice": 100, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ovin",
+        "variants": [
+          { "package": "20g", "sellingPrice": 110, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Tylodoxy Metrovet Red",
+        "variants": [
+          { "package": "25g", "sellingPrice": 200, "stockQty": 11, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Tylodoxy 200 Blue",
+        "variants": [
+          { "package": "25g", "sellingPrice": 120, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ascarex Pet dog D",
+        "variants": [
+          { "package": "20g", "sellingPrice": 100, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Wormicid",
+        "variants": [
+          { "package": "150mg", "sellingPrice": 10, "stockQty": 120, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "1g", "sellingPrice": 30, "stockQty": 39, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Red Cat",
+        "variants": [
+          { "package": "30g", "sellingPrice": 30, "stockQty": 11, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "10g", "sellingPrice": 20, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Biotrim Vet Plus",
+        "variants": [
+          { "package": "30g", "sellingPrice": 200, "stockQty": 10, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Metrocycline Soluble",
+        "variants": [
+          { "package": "25g", "sellingPrice": 100, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Liquid Paraffin (Impact)",
+        "variants": [
+          { "package": "100mls", "sellingPrice": 90, "stockQty": 7, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "50ml", "sellingPrice": 80, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Biosafe",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 140, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Kerol",
+        "variants": [
+          { "package": "250ml", "sellingPrice": 400, "stockQty": 2, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Actellic Super",
+        "variants": [
+          { "package": "100g", "sellingPrice": 160, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Skana Super",
+        "variants": [
+          { "package": "100g", "sellingPrice": 100, "stockQty": 8, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Milking Salve Norbrook",
+        "variants": [
+          { "package": "100g", "sellingPrice": 150, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Albafas 2.5%",
+        "variants": [
+          { "package": "120ml", "sellingPrice": 100, "stockQty": 8, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "500mls", "sellingPrice": 200, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "40ml", "sellingPrice": 80, "stockQty": 8, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Albafas 10%",
+        "variants": [
+          { "package": "120ml", "sellingPrice": 180, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Albendex 2.5% Vetcare",
+        "variants": [
+          { "package": "120ml", "sellingPrice": 50, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "500mls", "sellingPrice": 130, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "1ltr", "sellingPrice": 250, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Triatix",
+        "variants": [
+          { "package": "40ml", "sellingPrice": 200, "stockQty": 7, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "20ml", "sellingPrice": 130, "stockQty": 13, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Tixfix",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 220, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "20ml", "sellingPrice": 100, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Baraki Rat Pellets",
+        "variants": [
+          { "package": "10g", "sellingPrice": 60, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ratbomb",
+        "variants": [
+          { "package": "10g", "sellingPrice": 50, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Fuko kill",
+        "variants": [
+          { "package": "25g", "sellingPrice": 120, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Oshothion",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 140, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Bimatraz",
+        "variants": [
+          { "package": "20ml", "sellingPrice": 130, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Bimatraz Bimeda",
+        "variants": [
+          { "package": "40ml", "sellingPrice": 130, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Undertaker",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 250, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "50ml", "sellingPrice": 150, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Norotraz",
+        "variants": [
+          { "package": "40ml", "sellingPrice": 120, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Zetanil",
+        "variants": [
+          { "package": "40g", "sellingPrice": 125, "stockQty": 10, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ascarten Petdog Dewormer (20/= per tablet)",
+        "variants": [
+          { "package": "25mg", "sellingPrice": 20, "stockQty": 37, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Parvoe Dogs Vaccine",
+        "variants": [
+          { "package": "1 dose", "sellingPrice": 500, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "DHLP Dogs Vaccine",
+        "variants": [
+          { "package": "1 dose", "sellingPrice": 700, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "NCD Newcastle Poultry Vaccince (25 chicks)",
+        "variants": [
+          { "package": "1 dose", "sellingPrice": 120, "stockQty": 15, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "NCD Newcastle Poultry Vaccince (50 chicks)",
+        "variants": [
+          { "package": "1 dose", "sellingPrice": 200, "stockQty": 11, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Ivanor",
+        "variants": [
+          { "package": "50ml", "sellingPrice": 200, "stockQty": 6, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Dabotik 522.5 EC",
+        "variants": [
+          { "package": "40ml", "sellingPrice": 280, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "20ml", "sellingPrice": 150, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Farmtraz",
+        "variants": [
+          { "package": "20ml", "sellingPrice": 100, "stockQty": 10, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Needles G18",
+        "variants": [
+          { "package": "G18", "sellingPrice": 5, "stockQty": 98, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Vitaboost Injection",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 135, "stockQty": 0, "lowStockThreshold": 3, "flaggedForRestock": true }
+        ]
+      },
+      {
+        "name": "Plantone 45 SL",
+        "variants": [
+          { "package": "30ml", "sellingPrice": 180, "stockQty": 8, "lowStockThreshold": 3, "flaggedForRestock": false },
+          { "package": "100ml", "sellingPrice": 450, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Syringe (without needle)",
+        "variants": [
+          { "package": "20ml", "sellingPrice": 20, "stockQty": 98, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Syringe (with needle)",
+        "variants": [
+          { "package": "5ml", "sellingPrice": 10, "stockQty": 99, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "TikDip 522.5 EC",
+        "variants": [
+          { "package": "20ml", "sellingPrice": 180, "stockQty": 4, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Diseptorim Bolus",
+        "variants": [
+          { "package": "200mg/1.0g", "sellingPrice": 25, "stockQty": 38, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "ESB 30%",
+        "variants": [
+          { "package": "20G", "sellingPrice": 380, "stockQty": 3, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Healing Oil (Coopers)",
+        "variants": [
+          { "package": "100ml", "sellingPrice": 400, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Skazone",
+        "variants": [
+          { "package": "30g", "sellingPrice": 130, "stockQty": 10, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Dawa Boost",
+        "variants": [
+          { "package": "50ml", "sellingPrice": 150, "stockQty": 1, "lowStockThreshold": 3, "flaggedForRestock": true },
+          { "package": "100ml", "sellingPrice": 200, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      },
+      {
+        "name": "Dawa Boost Soluble",
+        "variants": [
+          { "package": "30g", "sellingPrice": 70, "stockQty": 5, "lowStockThreshold": 3, "flaggedForRestock": false }
+        ]
+      }
+    ]
+  }
+]

@@ -79,7 +79,7 @@ function parseCSV(text: string): { rows: ImportRow[]; errors: string[] } {
       description: get("description") || undefined,
       sku: get("sku") || undefined,
       barcode: get("barcode") || undefined,
-      packageSize: packageSizeVal,
+      packageSize: String(packageSizeVal),
       costPrice: parseFloat(get("costPrice") || get("costprice")) || 0,
       sellingPrice: parseFloat(get("sellingPrice") || get("sellingprice")) || 0,
       stockQuantity: parseInt(get("stockQuantity") || get("stockquantity")) || 0,
@@ -124,7 +124,7 @@ interface ProductForm {
 const emptyVariant = (): VariantForm => ({
   sku: "",
   barcode: "",
-  packageSize: 100,
+  packageSize: "100",
   costPrice: 0,
   sellingPrice: 0,
   stockQuantity: 0,
@@ -176,7 +176,7 @@ export function ProductsPage() {
   const createBrand = useMutation(api.brands.create);
   const createCategory = useMutation(api.categories.create);
   const bulkImport = useMutation(api.products.bulkImport);
-  const seedProducts = useMutation(api.seed.seedProducts);
+  // const seedProducts = useMutation((api.seed as any).seedProducts);
   const [seeding, setSeeding] = useState(false);
 
   // Bulk import state
@@ -209,7 +209,7 @@ export function ProductsPage() {
     setEditingId(product._id);
     setProductForm({
       name: product.name,
-      brandId: product.brandId,
+      brandId: product.brandId ?? "",
       categoryId: product.categoryId,
       description: product.description ?? "",
       imageUrl: product.imageUrl ?? "",
@@ -255,7 +255,7 @@ export function ProductsPage() {
         });
         for (const v of variants) {
           const payload = {
-            sku: v.sku || generateSkuCode(productForm.name, productForm.name, v.packageSize),
+            sku: v.sku || generateSkuCode(productForm.name, productForm.name, v.packageSize as any),
             barcode: v.barcode || undefined,
             packageSize: v.packageSize,
             costPrice: v.costPrice,
@@ -282,7 +282,7 @@ export function ProductsPage() {
         for (const v of variants) {
           await createVariant({
             productId: productId as Id<"products">,
-            sku: v.sku || generateSkuCode(brand?.name ?? "", productForm.name, v.packageSize),
+            sku: v.sku || generateSkuCode(brand?.name ?? "", productForm.name, v.packageSize as any),
             barcode: v.barcode || undefined,
             packageSize: v.packageSize,
             costPrice: v.costPrice,
@@ -640,7 +640,7 @@ export function ProductsPage() {
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     <Input label="SKU" value={v.sku} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, sku: e.target.value } : x))} placeholder="Auto-generated" />
-                    <Input label="Size (ml)" type="number" value={v.packageSize} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, packageSize: parseFloat(e.target.value) || 0 } : x))} />
+                    <Input label="Size (ml)" type="number" value={v.packageSize} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, packageSize: e.target.value } : x))} />
                     <Input label="Barcode (optional)" value={v.barcode} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, barcode: e.target.value } : x))} />
                     <Input label="Cost Price (KES)" type="number" value={v.costPrice} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, costPrice: parseFloat(e.target.value) || 0 } : x))} />
                     <Input label="Selling Price (KES)" type="number" value={v.sellingPrice} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, sellingPrice: parseFloat(e.target.value) || 0 } : x))} />

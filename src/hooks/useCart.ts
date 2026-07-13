@@ -8,7 +8,7 @@ export interface CartItem {
   productId: Id<"products">;
   productName: string;
   brandName: string;
-  packageSize: number;
+  packageSize: string;
   sku: string;
   unitPrice: number;
   quantity: number;

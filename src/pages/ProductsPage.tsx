@@ -25,7 +25,7 @@ interface ImportRow {
   description?: string;
   sku?: string;
   barcode?: string;
-  packageSize: number;
+  packageSize: string;
   costPrice: number;
   sellingPrice: number;
   stockQuantity: number;
@@ -105,7 +105,7 @@ interface VariantForm {
   id?: string;
   sku: string;
   barcode: string;
-  packageSize: number;
+  packageSize: string;
   costPrice: number;
   sellingPrice: number;
   stockQuantity: number;

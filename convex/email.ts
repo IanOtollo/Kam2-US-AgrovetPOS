@@ -18,7 +18,7 @@ export const sendLowStockAlert = action({
     remainingStock: v.number(),
     threshold: v.number(),
   },
-  handler: async (ctx, args) => {
+  handler: async (_ctx, args) => {
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.warn("Email credentials not configured");
       return { success: false };
@@ -59,7 +59,7 @@ export const sendSaleNotification = action({
     time: v.string(),
     itemsCount: v.number(),
   },
-  handler: async (ctx, args) => {
+  handler: async (_ctx, args) => {
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.warn("Email credentials not configured");
       return { success: false };

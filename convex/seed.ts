@@ -1,5 +1,4 @@
 import { mutation } from "./_generated/server";
-import { v } from "convex/values";
 import agrovetData from "./seedData/agrovetStock.json";
 
 export const createAdmin = mutation({

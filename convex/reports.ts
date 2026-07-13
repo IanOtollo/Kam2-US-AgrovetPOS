@@ -349,7 +349,7 @@ export const getTopSellingProducts = query({
 
     const stats: Record<
       string,
-      { variantId: string; productName: string; brandName: string; packageSize: number; sku: string; qtySold: number; revenue: number }
+      { variantId: string; productName: string; brandName: string; packageSize: string; sku: string; qtySold: number; revenue: number }
     > = {};
 
     for (const sale of completed) {

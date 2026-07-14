@@ -8,8 +8,8 @@ export const getStockOverview = query({
     const allProducts = await ctx.db.query("products").collect();
     const allBrands = await ctx.db.query("brands").collect();
 
-    const brandMap = new Map(allBrands.map(b => [b._id, b.name]));
-    const productMap = new Map();
+    const brandMap = new Map<string, string>(allBrands.map(b => [b._id, b.name]));
+    const productMap = new Map<string, { name: string, brandName: string }>();
     for (const p of allProducts) {
       productMap.set(p._id, {
         name: p.name,
@@ -39,8 +39,8 @@ export const getLowStock = query({
     const allProducts = await ctx.db.query("products").collect();
     const allBrands = await ctx.db.query("brands").collect();
 
-    const brandMap = new Map(allBrands.map(b => [b._id, b.name]));
-    const productMap = new Map();
+    const brandMap = new Map<string, string>(allBrands.map(b => [b._id, b.name]));
+    const productMap = new Map<string, { name: string, brandName: string }>();
     for (const p of allProducts) {
       productMap.set(p._id, {
         name: p.name,

@@ -21,13 +21,13 @@ export const list = query({
     const brandMap = new Map(allBrands.map(b => [b._id, b.name]));
     const categoryMap = new Map(allCategories.map(c => [c._id, c.name]));
 
-    const variantsByProduct = new Map();
+    const variantsByProduct = new Map<string, typeof allVariants>();
     for (const v of allVariants) {
       if (!v.isActive) continue;
       if (!variantsByProduct.has(v.productId)) {
         variantsByProduct.set(v.productId, []);
       }
-      variantsByProduct.get(v.productId).push(v);
+      variantsByProduct.get(v.productId)!.push(v);
     }
 
     const enriched = products.map((p) => {

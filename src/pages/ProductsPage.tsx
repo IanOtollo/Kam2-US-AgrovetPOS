@@ -640,7 +640,7 @@ export function ProductsPage() {
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     <Input label="SKU" value={v.sku} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, sku: e.target.value } : x))} placeholder="Auto-generated" />
-                    <Input label="Size (ml)" type="number" value={v.packageSize} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, packageSize: e.target.value } : x))} />
+                    <Input label="Package Size (e.g. 500ml, 1kg)" type="text" value={v.packageSize} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, packageSize: e.target.value } : x))} />
                     <Input label="Barcode (optional)" value={v.barcode} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, barcode: e.target.value } : x))} />
                     <Input label="Cost Price (KES)" type="number" value={v.costPrice} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, costPrice: parseFloat(e.target.value) || 0 } : x))} />
                     <Input label="Selling Price (KES)" type="number" value={v.sellingPrice} onChange={(e) => setVariants(variants.map((x, idx) => idx === i ? { ...x, sellingPrice: parseFloat(e.target.value) || 0 } : x))} />

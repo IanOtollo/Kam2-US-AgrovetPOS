@@ -5,17 +5,26 @@ export const getStockOverview = query({
   args: {},
   handler: async (ctx) => {
     const variants = await ctx.db.query("productVariants").collect();
-    const enriched = await Promise.all(
-      variants.map(async (variant) => {
-        const product = await ctx.db.get(variant.productId);
-        const brand = product?.brandId ? await ctx.db.get(product.brandId) : null;
-        return {
-          ...variant,
-          productName: product?.name ?? "",
-          brandName: brand?.name ?? "",
-        };
-      })
-    );
+    const allProducts = await ctx.db.query("products").collect();
+    const allBrands = await ctx.db.query("brands").collect();
+
+    const brandMap = new Map(allBrands.map(b => [b._id, b.name]));
+    const productMap = new Map();
+    for (const p of allProducts) {
+      productMap.set(p._id, {
+        name: p.name,
+        brandName: p.brandId ? (brandMap.get(p.brandId) ?? "") : "",
+      });
+    }
+
+    const enriched = variants.map((variant) => {
+      const pInfo = productMap.get(variant.productId);
+      return {
+        ...variant,
+        productName: pInfo?.name ?? "",
+        brandName: pInfo?.brandName ?? "",
+      };
+    });
     return enriched;
   },
 });
@@ -27,17 +36,26 @@ export const getLowStock = query({
     const low = variants.filter(
       (v) => v.isActive && v.stockQuantity <= v.lowStockThreshold
     );
-    const enriched = await Promise.all(
-      low.map(async (variant) => {
-        const product = await ctx.db.get(variant.productId);
-        const brand = product?.brandId ? await ctx.db.get(product.brandId) : null;
-        return {
-          ...variant,
-          productName: product?.name ?? "",
-          brandName: brand?.name ?? "",
-        };
-      })
-    );
+    const allProducts = await ctx.db.query("products").collect();
+    const allBrands = await ctx.db.query("brands").collect();
+
+    const brandMap = new Map(allBrands.map(b => [b._id, b.name]));
+    const productMap = new Map();
+    for (const p of allProducts) {
+      productMap.set(p._id, {
+        name: p.name,
+        brandName: p.brandId ? (brandMap.get(p.brandId) ?? "") : "",
+      });
+    }
+
+    const enriched = low.map((variant) => {
+      const pInfo = productMap.get(variant.productId);
+      return {
+        ...variant,
+        productName: pInfo?.name ?? "",
+        brandName: pInfo?.brandName ?? "",
+      };
+    });
     return enriched.sort((a, b) => a.stockQuantity - b.stockQuantity);
   },
 });

@@ -14,23 +14,32 @@ export const list = query({
     if (args.brandId) products = products.filter((p) => p.brandId === args.brandId);
     if (args.categoryId) products = products.filter((p) => p.categoryId === args.categoryId);
 
-    const enriched = await Promise.all(
-      products.map(async (p) => {
-        const brand = p.brandId ? await ctx.db.get(p.brandId) : null;
-        const category = await ctx.db.get(p.categoryId);
-        const variants = await ctx.db
-          .query("productVariants")
-          .withIndex("by_product", (q) => q.eq("productId", p._id))
-          .collect();
-        return {
-          ...p,
-          brandName: brand?.name ?? "",
-          categoryName: category?.name ?? "",
-          variants: variants.filter((v) => v.isActive),
-          variantCount: variants.filter((v) => v.isActive).length,
-        };
-      })
-    );
+    const allBrands = await ctx.db.query("brands").collect();
+    const allCategories = await ctx.db.query("categories").collect();
+    const allVariants = await ctx.db.query("productVariants").collect();
+
+    const brandMap = new Map(allBrands.map(b => [b._id, b.name]));
+    const categoryMap = new Map(allCategories.map(c => [c._id, c.name]));
+
+    const variantsByProduct = new Map();
+    for (const v of allVariants) {
+      if (!v.isActive) continue;
+      if (!variantsByProduct.has(v.productId)) {
+        variantsByProduct.set(v.productId, []);
+      }
+      variantsByProduct.get(v.productId).push(v);
+    }
+
+    const enriched = products.map((p) => {
+      const variants = variantsByProduct.get(p._id) || [];
+      return {
+        ...p,
+        brandName: p.brandId ? (brandMap.get(p.brandId) ?? "") : "",
+        categoryName: categoryMap.get(p.categoryId) ?? "",
+        variants,
+        variantCount: variants.length,
+      };
+    });
 
     return enriched;
   },

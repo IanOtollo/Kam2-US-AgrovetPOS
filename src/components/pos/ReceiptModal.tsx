@@ -71,7 +71,7 @@ export function ReceiptModal({ isOpen, saleId, onNewSale }: ReceiptModalProps) {
         <div className="space-y-1 mb-2">
           {sale.items.map((item, i) => (
             <div key={i}>
-              <p className="font-medium">{item.productName} {item.brandName} {item.packageSize}ml</p>
+              <p className="font-medium">{item.productName} {item.brandName} {item.packageSize}</p>
               <div className="flex justify-between pl-2">
                 <span>{item.quantity} × {formatCurrency(item.unitPrice)}</span>
                 <span>{formatCurrency(item.lineTotal)}</span>

@@ -248,7 +248,7 @@ export function ProductGrid({ onAddItem, searchRef }: ProductGridProps) {
                               : "hover:bg-[#F7F3E9]"
                           )}
                         >
-                          <span className="font-medium">{v.packageSize}ml</span>
+                          <span className="font-medium">{v.packageSize}</span>
                           <span className="font-mono tabular-nums">{formatCurrency(v.sellingPrice)}</span>
                         </button>
                       ))}

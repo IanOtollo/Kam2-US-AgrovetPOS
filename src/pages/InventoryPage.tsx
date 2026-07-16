@@ -155,7 +155,7 @@ export function InventoryPage() {
                         <TableCell><span className="font-medium">{v.productName}</span></TableCell>
                         <TableCell>{v.brandName}</TableCell>
                         <TableCell><span className="font-mono text-sm">{v.sku}</span></TableCell>
-                        <TableCell align="center">{v.packageSize}ml</TableCell>
+                        <TableCell align="center">{v.packageSize}</TableCell>
                         <TableCell align="right"><span className="font-mono">{formatCurrency(v.costPrice)}</span></TableCell>
                         <TableCell align="right"><span className="font-mono">{formatCurrency(v.sellingPrice)}</span></TableCell>
                         <TableCell align="center"><span className="font-mono font-medium">{v.stockQuantity}</span></TableCell>
@@ -178,7 +178,7 @@ export function InventoryPage() {
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0">
                         <p className="font-medium text-sm text-[#2C5F2D] truncate">{v.productName}</p>
-                        <p className="text-xs text-[#5C6B5C]">{v.brandName} Â· {v.packageSize}ml</p>
+                        <p className="text-xs text-[#5C6B5C]">{v.brandName} · {v.packageSize}</p>
                         <p className="text-xs font-mono text-[#5C6B5C] mt-0.5">{v.sku}</p>
                       </div>
                       <StockBadge quantity={v.stockQuantity} threshold={v.lowStockThreshold} />
@@ -236,7 +236,7 @@ export function InventoryPage() {
                   <TableBody>
                     {lowStock.map((v) => (
                       <TableRow key={v._id}>
-                        <TableCell><span className="font-medium">{v.productName} {v.packageSize}ml</span></TableCell>
+                        <TableCell><span className="font-medium">{v.productName} {v.packageSize}</span></TableCell>
                         <TableCell>{v.brandName}</TableCell>
                         <TableCell><span className="font-mono text-sm">{v.sku}</span></TableCell>
                         <TableCell align="center"><span className="font-mono font-medium text-[#DC2626]">{v.stockQuantity}</span></TableCell>
@@ -259,7 +259,7 @@ export function InventoryPage() {
                   <div key={v._id} className="bg-white border border-[#E3DCC8] rounded-md p-4">
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0">
-                        <p className="font-medium text-sm text-[#2C5F2D]">{v.productName} {v.packageSize}ml</p>
+                        <p className="font-medium text-sm text-[#2C5F2D]">{v.productName} {v.packageSize}</p>
                         <p className="text-xs text-[#5C6B5C]">{v.brandName} Â· {v.sku}</p>
                       </div>
                       <StockBadge quantity={v.stockQuantity} threshold={v.lowStockThreshold} />
@@ -297,7 +297,7 @@ export function InventoryPage() {
         {adjustingItem && (
           <div className="space-y-4">
             <div className="bg-[#F7F3E9] rounded-md p-3">
-              <p className="text-sm font-medium">{adjustingItem.productName} {adjustingItem.packageSize}ml</p>
+              <p className="text-sm font-medium">{adjustingItem.productName} {adjustingItem.packageSize}</p>
               <p className="text-sm text-[#5C6B5C]">{adjustingItem.sku} Â· Current stock: {adjustingItem.stockQuantity}</p>
             </div>
             <Input

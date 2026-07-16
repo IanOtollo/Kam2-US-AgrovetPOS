@@ -435,7 +435,7 @@ export function DashboardPage() {
                         {product.productName}
                       </p>
                       <p className="text-[10px] text-[#5C6B5C] truncate">
-                        {product.brandName} Â· {product.packageSize}ml
+                        {product.brandName} · {product.packageSize}
                       </p>
                     </div>
                     <span className="text-xs font-semibold text-right w-8 flex-shrink-0">
@@ -489,7 +489,7 @@ export function DashboardPage() {
                         {item.productName}
                       </p>
                       <p className="text-xs text-[#5C6B5C]">
-                        {item.brandName} Â· {item.packageSize}ml
+                        {item.brandName} · {item.packageSize}
                       </p>
                     </div>
                     <span className="text-xs font-semibold text-[#DC2626] bg-red-50 px-2 py-0.5 rounded-full flex-shrink-0 whitespace-nowrap">

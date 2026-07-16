@@ -57,7 +57,7 @@ export const create = mutation({
     notes: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
-    let shouldTriggerFullReport = false;
+
     // Validate stock and decrement atomically
     for (const item of args.items) {
       const variant = await ctx.db.get(item.variantId);
@@ -92,19 +92,6 @@ export const create = mutation({
         createdAt: Date.now(),
       });
 
-      if (
-        (previousStock > variant.lowStockThreshold && newStock <= variant.lowStockThreshold) ||
-        (previousStock > 0 && newStock === 0)
-      ) {
-        shouldTriggerFullReport = true;
-      }
-    }
-
-    const lowStockSetting = await ctx.db.query("settings").withIndex("by_key", q => q.eq("key", "lowStockAlerts")).first();
-    const isLowStockAlertsEnabled = lowStockSetting?.value !== "false";
-
-    if (isLowStockAlertsEnabled && shouldTriggerFullReport) {
-      await ctx.scheduler.runAfter(0, api.email.sendFullStockReport, {});
     }
 
     // Update customer stats if attached
@@ -138,19 +125,7 @@ export const create = mutation({
       createdAt: Date.now(),
     });
 
-    const saleAlertSetting = await ctx.db.query("settings").withIndex("by_key", q => q.eq("key", "saleAlerts")).first();
-    const isSaleAlertsEnabled = saleAlertSetting?.value !== "false";
 
-    if (isSaleAlertsEnabled) {
-      const cashier = await ctx.db.get(args.cashierId);
-      await ctx.scheduler.runAfter(0, api.email.sendSaleNotification, {
-        saleNumber,
-        totalAmount: args.grandTotal,
-        cashierName: cashier?.name ?? "Unknown",
-        time: new Date().toLocaleString("en-KE", { timeZone: "Africa/Nairobi" }),
-        itemsCount: args.items.reduce((acc, item) => acc + item.quantity, 0),
-      });
-    }
 
     return { saleId, saleNumber };
   },

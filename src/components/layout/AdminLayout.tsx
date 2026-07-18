@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
-import type { Id } from "../../../convex/_generated/dataModel";
+
 import { Search, Settings, Package, Users, ChevronRight, X, LogOut } from "lucide-react";
 import { useAuth } from "../../hooks/useAuth";
 import { BottomNav } from "./BottomNav";
@@ -15,7 +15,7 @@ interface AdminLayoutProps {
 }
 
 export function AdminLayout({ children, title }: AdminLayoutProps) {
-  const { user, logout } = useAuth();
+  const { logout } = useAuth();
   const navigate = useNavigate();
   
   const [searchQuery, setSearchQuery] = useState("");

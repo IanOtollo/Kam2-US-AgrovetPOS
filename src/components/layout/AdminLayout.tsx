@@ -57,16 +57,7 @@ export function AdminLayout({ children, title }: AdminLayoutProps) {
     }
   };
 
-  const liveUser = useQuery(
-    api.users.getById,
-    user?._id ? { id: user._id as Id<"users"> } : "skip"
-  );
-  const displayName = liveUser?.name ?? user?.name ?? "";
-  const displayRole = liveUser?.role ?? user?.role ?? "";
 
-  const initials = displayName
-    ? displayName.split(" ").map((w: string) => w[0]).join("").toUpperCase().slice(0, 2)
-    : "?";
 
   const queryLower = searchQuery.toLowerCase().trim();
   const matchedProducts = queryLower

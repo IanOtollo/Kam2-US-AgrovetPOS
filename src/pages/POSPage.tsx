@@ -10,7 +10,7 @@ import { CartPanel } from "../components/pos/CartPanel";
 import { PaymentModal } from "../components/pos/PaymentModal";
 import { ReceiptModal } from "../components/pos/ReceiptModal";
 import { formatDateTime, formatCurrency } from "../lib/utils";
-import { Lock, LayoutGrid, PauseCircle, Clock, ShoppingCart, LayoutDashboard, Receipt, Users, LogOut } from "lucide-react";
+import { LayoutGrid, PauseCircle, Clock, ShoppingCart, LayoutDashboard, Receipt, Users, LogOut } from "lucide-react";
 import { BottomNav } from "../components/layout/BottomNav";
 import type { Id } from "../../convex/_generated/dataModel";
 

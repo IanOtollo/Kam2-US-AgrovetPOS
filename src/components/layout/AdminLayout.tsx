@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import type { Id } from "../../../convex/_generated/dataModel";
-import { Search, Settings, Package, Users, ChevronRight, X } from "lucide-react";
+import { Search, Settings, Package, Users, ChevronRight, X, LogOut } from "lucide-react";
 import { useAuth } from "../../hooks/useAuth";
 import { BottomNav } from "./BottomNav";
 import { cn } from "../../lib/utils";
@@ -15,7 +15,7 @@ interface AdminLayoutProps {
 }
 
 export function AdminLayout({ children, title }: AdminLayoutProps) {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
   
   const [searchQuery, setSearchQuery] = useState("");
@@ -225,14 +225,17 @@ export function AdminLayout({ children, title }: AdminLayoutProps) {
             >
               <Settings size={20} strokeWidth={2} />
             </button>
-            <div className={"flex items-center gap-2 pl-3 ml-1 border-l border-gray-300"}>
-              <div className={"w-8 h-8 rounded-full bg-[#2C5F2D] text-white flex items-center justify-center text-xs font-bold shadow-sm flex-shrink-0"}>
-                {initials}
-              </div>
-              <div className={"hidden sm:block leading-tight"}>
-                <p className={"text-sm font-bold text-[#0A0A0A] leading-none"}>{displayName}</p>
-                <p className={"text-[11px] font-medium text-[#5C6B5C] capitalize mt-1"}>{displayRole}</p>
-              </div>
+            <div className={"flex items-center pl-3 ml-1 border-l border-gray-300"}>
+              <button
+                onClick={() => {
+                  logout();
+                  navigate("/login");
+                }}
+                className={"flex items-center gap-2 px-3 py-1.5 text-sm font-bold text-[#DC2626] bg-red-50 hover:bg-red-100 rounded-md transition-colors"}
+              >
+                <LogOut size={16} />
+                <span className="hidden sm:inline">Log Out</span>
+              </button>
             </div>
           </div>
         </header>

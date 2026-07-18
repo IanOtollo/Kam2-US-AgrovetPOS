@@ -119,7 +119,7 @@ export const getProductReport = query({
         const key = item.sku;
         if (!productStats[key]) {
           productStats[key] = {
-            name: `${item.productName} ${item.packageSize}ml`,
+            name: `${item.productName} ${item.packageSize}`,
             brand: item.brandName,
             sku: item.sku,
             quantity: 0,

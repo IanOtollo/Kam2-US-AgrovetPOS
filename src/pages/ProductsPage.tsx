@@ -485,7 +485,7 @@ export function ProductsPage() {
                             {product.variants.map((v) => (
                               <div key={v._id} className="flex items-center gap-6 text-sm py-1 border-b border-[#E3DCC8] last:border-0">
                                 <span className="font-mono text-sm w-40">{v.sku}</span>
-                                <span className="w-16">{v.packageSize}ml</span>
+                                <span className="w-16">{v.packageSize}</span>
                                 <span className="font-mono w-28">{formatCurrency(v.sellingPrice)}</span>
                                 <span className="w-20">Stock: {v.stockQuantity}</span>
                                 <span className="w-20 text-[#5C6B5C]">Min: {v.lowStockThreshold}</span>
@@ -721,7 +721,7 @@ export function ProductsPage() {
                 <table className="w-full text-xs">
                   <thead className="bg-[#F7F3E9]">
                     <tr>
-                      {["Name", "Brand", "Category", "Size (ml)", "Cost", "Price", "Stock"].map((h) => (
+                      {["Name", "Brand", "Category", "Size", "Cost", "Price", "Stock"].map((h) => (
                         <th key={h} className="text-left px-3 py-2 font-medium text-[#5C6B5C] whitespace-nowrap">{h}</th>
                       ))}
                     </tr>

@@ -209,7 +209,7 @@ export function SalesPage() {
                   {saleDetail.items.map((item, i) => (
                     <TableRow key={i}>
                       <TableCell>
-                        <p className="font-medium">{item.productName} {item.brandName} {item.packageSize}ml</p>
+                        <p className="font-medium">{item.productName} {item.brandName} {item.packageSize}</p>
                         <p className="text-sm text-[#5C6B5C]">{item.sku}</p>
                       </TableCell>
                       <TableCell align="center">{item.quantity}</TableCell>
@@ -225,7 +225,7 @@ export function SalesPage() {
             <div className="sm:hidden space-y-2">
               {saleDetail.items.map((item, i) => (
                 <div key={i} className="border border-[#E3DCC8] rounded-md p-3">
-                  <p className="font-medium text-sm">{item.productName} {item.brandName} {item.packageSize}ml</p>
+                  <p className="font-medium text-sm">{item.productName} {item.brandName} {item.packageSize}</p>
                   <p className="text-xs text-[#5C6B5C] mb-2">{item.sku}</p>
                   <div className="flex justify-between text-sm">
                     <span className="text-[#5C6B5C]">Qty: {item.quantity} x {formatCurrency(item.unitPrice)}</span>

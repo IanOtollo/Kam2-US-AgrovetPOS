@@ -10,7 +10,7 @@ import { CartPanel } from "../components/pos/CartPanel";
 import { PaymentModal } from "../components/pos/PaymentModal";
 import { ReceiptModal } from "../components/pos/ReceiptModal";
 import { formatDateTime, formatCurrency } from "../lib/utils";
-import { Lock, LayoutGrid, PauseCircle, Clock, ShoppingCart, LayoutDashboard, Receipt, Users } from "lucide-react";
+import { Lock, LayoutGrid, PauseCircle, Clock, ShoppingCart, LayoutDashboard, Receipt, Users, LogOut } from "lucide-react";
 import { BottomNav } from "../components/layout/BottomNav";
 import type { Id } from "../../convex/_generated/dataModel";
 
@@ -176,14 +176,14 @@ export function POSPage() {
           </>
         )}
 
-        {/* Lock */}
+        {/* Log Out */}
         <button
           onClick={() => { logout(); navigate("/login"); }}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-sm text-white/80 hover:text-white transition-colors"
-          title="Sign Out"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-red-500/20 hover:bg-red-500/40 text-sm text-red-100 hover:text-white transition-colors ml-2 border border-red-500/30"
+          title="Log Out"
         >
-          <Lock size={14} />
-          <span className="hidden sm:inline">Lock</span>
+          <LogOut size={14} />
+          <span className="hidden sm:inline">Log Out</span>
         </button>
       </header>
 

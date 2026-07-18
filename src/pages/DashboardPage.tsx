@@ -392,11 +392,11 @@ export function DashboardPage() {
 
         {/* RIGHT */}
         <div className="space-y-5">
-          {/* Top Selling Perfumes */}
+          {/* Top Selling Products */}
           <div className="bg-white border border-[#E3DCC8] rounded-md p-5">
             <div className="flex items-center justify-between mb-3">
               <p className="text-xs font-semibold uppercase tracking-wider text-[#5C6B5C]">
-                Top Selling Perfumes
+                Top Selling Products
               </p>
               <button
                 onClick={() => navigate("/products")}

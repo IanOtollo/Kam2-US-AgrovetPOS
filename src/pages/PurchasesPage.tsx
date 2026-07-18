@@ -49,7 +49,7 @@ export function PurchasesPage() {
   const supplierOptions = (suppliers ?? []).map((s) => ({ value: s._id, label: s.name }));
   const variantOptions = (stockOverview ?? []).filter((v) => v.isActive).map((v) => ({
     value: v._id,
-    label: `${v.productName} ${v.packageSize}ml - ${v.sku}`,
+    label: `${v.productName} ${v.packageSize} - ${v.sku}`,
   }));
 
   const addPOItem = () => {
@@ -63,7 +63,7 @@ export function PurchasesPage() {
       updated[i] = {
         ...updated[i],
         variantId: value,
-        productName: variant ? `${variant.productName} ${variant.packageSize}ml` : "",
+        productName: variant ? `${variant.productName} ${variant.packageSize}` : "",
         sku: variant?.sku ?? "",
         lineTotal: updated[i].quantity * (updated[i].unitCost || 0),
       };

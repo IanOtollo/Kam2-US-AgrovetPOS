@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { useQuery, useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
-import type { Id } from "../../convex/_generated/dataModel";
-import { AdminLayout } from "../components/layout/AdminLayout";
-import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from "../components/ui/Table";
-import { Button } from "../components/ui/Button";
-import { Input } from "../components/ui/Input";
-import { Select } from "../components/ui/Select";
-import { Modal } from "../components/ui/Modal";
-import { StatusBadge } from "../components/ui/Badge";
-import { EmptyState } from "../components/ui/EmptyState";
-import { SkeletonTable } from "../components/ui/Skeleton";
-import { formatCurrency, formatDate } from "../lib/utils";
-import { useAuth } from "../hooks/useAuth";
+import { api } from "../../../convex/_generated/api";
+import type { Id } from "../../../convex/_generated/dataModel";
+import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from "../../components/ui/Table";
+import { Button } from "../../components/ui/Button";
+import { Input } from "../../components/ui/Input";
+import { Select } from "../../components/ui/Select";
+import { Modal } from "../../components/ui/Modal";
+import { StatusBadge } from "../../components/ui/Badge";
+import { EmptyState } from "../../components/ui/EmptyState";
+import { SkeletonTable } from "../../components/ui/Skeleton";
+import { formatCurrency, formatDate } from "../../lib/utils";
+import { useAuth } from "../../hooks/useAuth";
 import { Plus, Truck } from "lucide-react";
 
 interface POItem {
@@ -24,7 +23,7 @@ interface POItem {
   lineTotal: number;
 }
 
-export function PurchasesPage() {
+export function PurchasesView() {
   const { user } = useAuth();
   const [showNew, setShowNew] = useState(false);
   const [selectedPO, setSelectedPO] = useState<string | null>(null);
@@ -127,7 +126,7 @@ export function PurchasesPage() {
   };
 
   return (
-    <AdminLayout title="Purchase Orders">
+    <div className="space-y-4 w-full h-full">
       <div className="flex justify-end mb-4">
         <Button onClick={() => setShowNew(true)} className="w-full sm:w-auto"><Plus size={16} /> New Purchase Order</Button>
       </div>
@@ -287,6 +286,6 @@ export function PurchasesPage() {
           </div>
         )}
       </Modal>
-    </AdminLayout>
+    </div>
   );
 }

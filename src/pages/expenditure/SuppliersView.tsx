@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { useQuery, useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
-import type { Id } from "../../convex/_generated/dataModel";
-import { AdminLayout } from "../components/layout/AdminLayout";
-import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from "../components/ui/Table";
-import { Button } from "../components/ui/Button";
-import { Input } from "../components/ui/Input";
-import { Modal } from "../components/ui/Modal";
-import { StatusBadge } from "../components/ui/Badge";
-import { EmptyState } from "../components/ui/EmptyState";
-import { SkeletonTable } from "../components/ui/Skeleton";
+import { api } from "../../../convex/_generated/api";
+import type { Id } from "../../../convex/_generated/dataModel";
+import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from "../../components/ui/Table";
+import { Button } from "../../components/ui/Button";
+import { Input } from "../../components/ui/Input";
+import { Modal } from "../../components/ui/Modal";
+import { StatusBadge } from "../../components/ui/Badge";
+import { EmptyState } from "../../components/ui/EmptyState";
+import { SkeletonTable } from "../../components/ui/Skeleton";
 import { Plus, Building2, Edit } from "lucide-react";
 
 interface SupplierForm {
@@ -20,7 +19,7 @@ interface SupplierForm {
   address: string;
 }
 
-export function SuppliersPage() {
+export function SuppliersView() {
   const [showModal, setShowModal] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<SupplierForm>({ name: "", contactName: "", phone: "", email: "", address: "" });
@@ -77,7 +76,7 @@ export function SuppliersPage() {
   };
 
   return (
-    <AdminLayout title="Suppliers">
+    <div className="space-y-4 w-full h-full">
       <div className="flex justify-end mb-4">
         <Button onClick={openAdd} className="w-full sm:w-auto"><Plus size={16} /> Add Supplier</Button>
       </div>
@@ -168,6 +167,6 @@ export function SuppliersPage() {
           </div>
         </div>
       </Modal>
-    </AdminLayout>
+    </div>
   );
 }

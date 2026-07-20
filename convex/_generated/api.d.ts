@@ -15,6 +15,7 @@ import type * as clearImages from "../clearImages.js";
 import type * as customers from "../customers.js";
 import type * as expenses from "../expenses.js";
 import type * as files from "../files.js";
+import type * as getCostPrices from "../getCostPrices.js";
 import type * as getMissingImages from "../getMissingImages.js";
 import type * as http from "../http.js";
 import type * as inspectImages from "../inspectImages.js";
@@ -44,6 +45,7 @@ declare const fullApi: ApiFromModules<{
   customers: typeof customers;
   expenses: typeof expenses;
   files: typeof files;
+  getCostPrices: typeof getCostPrices;
   getMissingImages: typeof getMissingImages;
   http: typeof http;
   inspectImages: typeof inspectImages;

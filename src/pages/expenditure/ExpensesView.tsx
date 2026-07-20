@@ -1,25 +1,24 @@
 import { useState } from "react";
 import { useQuery, useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
-import { AdminLayout } from "../components/layout/AdminLayout";
-import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from "../components/ui/Table";
-import { Button } from "../components/ui/Button";
-import { Input } from "../components/ui/Input";
-import { Select } from "../components/ui/Select";
-import { Modal } from "../components/ui/Modal";
-import { Badge } from "../components/ui/Badge";
-import { EmptyState } from "../components/ui/EmptyState";
-import { SkeletonTable } from "../components/ui/Skeleton";
-import { ConfirmDialog } from "../components/ui/ConfirmDialog";
-import { formatCurrency, formatDate } from "../lib/utils";
-import { useAuth } from "../hooks/useAuth";
-import { EXPENSE_CATEGORIES } from "../lib/constants";
+import { api } from "../../../convex/_generated/api";
+import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from "../../components/ui/Table";
+import { Button } from "../../components/ui/Button";
+import { Input } from "../../components/ui/Input";
+import { Select } from "../../components/ui/Select";
+import { Modal } from "../../components/ui/Modal";
+import { Badge } from "../../components/ui/Badge";
+import { EmptyState } from "../../components/ui/EmptyState";
+import { SkeletonTable } from "../../components/ui/Skeleton";
+import { ConfirmDialog } from "../../components/ui/ConfirmDialog";
+import { formatCurrency, formatDate } from "../../lib/utils";
+import { useAuth } from "../../hooks/useAuth";
+import { EXPENSE_CATEGORIES } from "../../lib/constants";
 import { Plus, DollarSign } from "lucide-react";
-import type { Id } from "../../convex/_generated/dataModel";
+import type { Id } from "../../../convex/_generated/dataModel";
 
 type ExpenseCategory = "rent" | "utilities" | "salaries" | "supplies" | "marketing" | "maintenance" | "other";
 
-export function ExpensesPage() {
+export function ExpensesView() {
   const { user } = useAuth();
   const [showModal, setShowModal] = useState(false);
   const [deleteId, setDeleteId] = useState<string | null>(null);
@@ -72,7 +71,7 @@ export function ExpensesPage() {
   };
 
   return (
-    <AdminLayout title="Expenses">
+    <div className="space-y-4 w-full h-full">
       {/* Header row */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
         <div className="bg-white border border-[#E3DCC8] rounded-md px-4 py-2">
@@ -170,6 +169,6 @@ export function ExpensesPage() {
         message="This expense record will be permanently deleted."
         confirmLabel="Delete"
       />
-    </AdminLayout>
+    </div>
   );
 }

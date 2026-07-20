@@ -1,0 +1,144 @@
+[
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "DAP Falcon 2093",
+      "package": "25kg",
+      "kaviPrice": 3200
+    },
+    "matchedProductName": "DAP Falcon (@160/= per Kg)",
+    "dbVariants": [
+      "10kg"
+    ]
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Easy Grow Vegetative 1322",
+      "package": "250g",
+      "kaviPrice": 115
+    },
+    "matchedProductName": "Easy Grow Vegetative",
+    "dbVariants": [
+      "120g"
+    ]
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Easy Grow F/F 1313",
+      "package": "120g",
+      "kaviPrice": 65
+    },
+    "matchedProductName": "Easy Grow F/F",
+    "dbVariants": [
+      "100ml"
+    ]
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Easy Grow F/F 1315",
+      "package": "250g",
+      "kaviPrice": 115
+    },
+    "matchedProductName": "Easy Grow F/F",
+    "dbVariants": [
+      "100ml"
+    ]
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Chick Mash 2044",
+      "package": "50kg",
+      "kaviPrice": 3640
+    },
+    "matchedProductName": "Chick Mash",
+    "dbVariants": [
+      "100ml"
+    ]
+  },
+  {
+    "reason": "Product not found",
+    "excelItem": {
+      "description": "Centrino 0489",
+      "package": "24g",
+      "kaviPrice": 145
+    }
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Feeder Pharmplan 4356",
+      "package": "3kg",
+      "kaviPrice": 330
+    },
+    "matchedProductName": "Feeder Pharmplan",
+    "dbVariants": [
+      "1.5kg",
+      "3.5kg"
+    ]
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Pigeon Hole Feeder Pharmplan 3109",
+      "package": "Big",
+      "kaviPrice": 150
+    },
+    "matchedProductName": "Feeder Pharmplan",
+    "dbVariants": [
+      "1.5kg",
+      "3.5kg"
+    ]
+  },
+  {
+    "reason": "Product not found",
+    "excelItem": {
+      "description": "Tylodoxy Red 2549",
+      "package": "25g",
+      "kaviPrice": 150
+    }
+  },
+  {
+    "reason": "Product not found",
+    "excelItem": {
+      "description": "Tylodoxy Blue 2551",
+      "package": "25g",
+      "kaviPrice": 120
+    }
+  },
+  {
+    "reason": "Product not found",
+    "excelItem": {
+      "description": "Ascarex D 0263",
+      "package": "20g",
+      "kaviPrice": 82
+    }
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Albafas 10% 0132",
+      "package": "120ml",
+      "kaviPrice": 155
+    },
+    "matchedProductName": "Albafas 10%",
+    "dbVariants": [
+      "100kg"
+    ]
+  },
+  {
+    "reason": "Variant not found",
+    "excelItem": {
+      "description": "Bimatraz Bimeda 0343",
+      "package": "40ml",
+      "kaviPrice": 110
+    },
+    "matchedProductName": "Bimatraz",
+    "dbVariants": [
+      "20ml"
+    ]
+  }
+]

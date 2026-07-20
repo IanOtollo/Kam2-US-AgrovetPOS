@@ -1,0 +1,1002 @@
+[
+  {
+    "productId": "k171cmn0w5q2jp5kskdcqppxb18aft7w",
+    "productName": "Green Crop Booster",
+    "variantId": "jx71rw3r9rwh81bf0h40yceq098aen2k",
+    "packageSize": "1ltr",
+    "oldCostPrice": 0,
+    "newCostPrice": 165,
+    "excelDescription": "Green Crop Booster 1192",
+    "excelPackage": "1ltr"
+  },
+  {
+    "productId": "k17c3f9pc7hgk1bwxn1yzm9rs58afm75",
+    "productName": "Duduthrin 1.75 SEC",
+    "variantId": "jx70w13az8a51n4n3w4jr9f7w98aerec",
+    "packageSize": "50ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 140,
+    "excelDescription": "Duduthrin 1.75 SEC 0784",
+    "excelPackage": "50ml"
+  },
+  {
+    "productId": "k178ajynfhya8q47jtczs6bktn8ae38e",
+    "productName": "Halothrin",
+    "variantId": "jx768j72tn37wv8ry92cap4tf98afvrw",
+    "packageSize": "100ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 150,
+    "excelDescription": "Halothrin",
+    "excelPackage": "100ml"
+  },
+  {
+    "productId": "k17cdepjfsnwcvqv1xwp40f0658aegrx",
+    "productName": "Alphaguard",
+    "variantId": "jx79gmjnfwrnhnzqvpkzb05n898afrfm",
+    "packageSize": "50mls",
+    "oldCostPrice": 0,
+    "newCostPrice": 105,
+    "excelDescription": "Alphaguard 0212",
+    "excelPackage": "50mls"
+  },
+  {
+    "productId": "k17b7w2scr5mtna2vz2xmrx6258afhgs",
+    "productName": "Poultry Microbes",
+    "variantId": "jx74s0xspa6s6kdjvgqyndftgx8aer44",
+    "packageSize": "500ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 100,
+    "excelDescription": "Poultry Microbes 2430",
+    "excelPackage": "500ml"
+  },
+  {
+    "productId": "k17b7w2scr5mtna2vz2xmrx6258afhgs",
+    "productName": "Poultry Microbes",
+    "variantId": "jx71zac8e4sx36hjcaa6fjkwx98afyk2",
+    "packageSize": "1litres",
+    "oldCostPrice": 0,
+    "newCostPrice": 200,
+    "excelDescription": "Poultry Microbes 2431",
+    "excelPackage": "1litres"
+  },
+  {
+    "productId": "k17bps1jc9sqwnd6d2g9s39m2d8afx3f",
+    "productName": "Collards 10g Royal Advanta",
+    "variantId": "jx7fqw13mkg72g3kwn35jawyhx8aevgv",
+    "packageSize": "10g",
+    "oldCostPrice": 0,
+    "newCostPrice": 55,
+    "excelDescription": "Collards 10G Royal 2941",
+    "excelPackage": "10G"
+  },
+  {
+    "productId": "k17fn65fn0p3cmsxwbm98g03en8afkgq",
+    "productName": "Collards 50g Advanta",
+    "variantId": "jx78x6r50h0wm8n41gtqeyxmm98aet0e",
+    "packageSize": "50g",
+    "oldCostPrice": 0,
+    "newCostPrice": 125,
+    "excelDescription": "Collards 50G Advanta 3557",
+    "excelPackage": "50G"
+  },
+  {
+    "productId": "k176nx3tmjbb7mg130bs7wtthn8ae4d8",
+    "productName": "Spinach Simlaw",
+    "variantId": "jx7fh04h52r0ts9werx9za07pn8ae7k9",
+    "packageSize": "10g",
+    "oldCostPrice": 0,
+    "newCostPrice": 45,
+    "excelDescription": "Spinach Simlaw 2607",
+    "excelPackage": "10G"
+  },
+  {
+    "productId": "k176nx3tmjbb7mg130bs7wtthn8ae4d8",
+    "productName": "Spinach Simlaw",
+    "variantId": "jx78d82wkm1weca3ps20jfwz018ae6j3",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 70,
+    "excelDescription": "Spinach Simlaw 1838",
+    "excelPackage": "25G"
+  },
+  {
+    "productId": "k1761dvqb79ysec9b4k54js1v58afpsw",
+    "productName": "Simlaw Dhania",
+    "variantId": "jx7agp0eh17nf27a7sjc7g34h98af7ce",
+    "packageSize": "50g",
+    "oldCostPrice": 0,
+    "newCostPrice": 125,
+    "excelDescription": "Simlaw Dhania 2219",
+    "excelPackage": "50g"
+  },
+  {
+    "productId": "k1761dvqb79ysec9b4k54js1v58afpsw",
+    "productName": "Simlaw Dhania",
+    "variantId": "jx76bps9w65rgh054enhgbm4v18afwq7",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Simlaw Dhania 2219",
+    "excelPackage": "25g"
+  },
+  {
+    "productId": "k17aey36x84tsq797bkqgd47hh8af9k1",
+    "productName": "Simlaw Saga",
+    "variantId": "jx75f4ec40pswsmez42h09qdb18aft3f",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 80,
+    "excelDescription": "Simlaw Saga 2261",
+    "excelPackage": "25g"
+  },
+  {
+    "productId": "k176vq0jhprddjgrjvsv8kjkr58afk6e",
+    "productName": "Chick and Duckling Crumbs",
+    "variantId": "jx75yk4jh04sx4myk2g6q6vgz18ae7h4",
+    "packageSize": "50kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 3660,
+    "excelDescription": "Chick and Duckling Crumbs 3764",
+    "excelPackage": "50kg"
+  },
+  {
+    "productId": "k177fjewsy2ynr48frjh184pmx8aebvs",
+    "productName": "Fast Grow Finisher Pellets (UNGA)",
+    "variantId": "jx70m3kntfqcpyd8t9pdxs7bsn8afkk4",
+    "packageSize": "50kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 3800,
+    "excelDescription": "Fast Grow Finisher Pellets (UNGA) 2054",
+    "excelPackage": "50kg"
+  },
+  {
+    "productId": "k17evnh05qpn04esjqvzgdhnj58af51d",
+    "productName": "Growers Mash (UNGA)",
+    "variantId": "jx7cd7fz6tkvgb4khyjt2yw1gh8afsxd",
+    "packageSize": "10kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 620,
+    "excelDescription": "Growers Mash (UNGA) 2046",
+    "excelPackage": "10kg"
+  },
+  {
+    "productId": "k178qm2dmrydbvmk0qyg5jwnx18ae29s",
+    "productName": "Kale 1000 Headed Royal",
+    "variantId": "jx72hq8evj1y9yhak75jbyrxps8afbam",
+    "packageSize": "10g",
+    "oldCostPrice": 0,
+    "newCostPrice": 57,
+    "excelDescription": "Kale 1000 Headed Royal 2322",
+    "excelPackage": "10g"
+  },
+  {
+    "productId": "k178qm2dmrydbvmk0qyg5jwnx18ae29s",
+    "productName": "Kale 1000 Headed Royal",
+    "variantId": "jx74vesdz2kcw9rvksb4gjvhw98af6ew",
+    "packageSize": "50g",
+    "oldCostPrice": 0,
+    "newCostPrice": 180,
+    "excelDescription": "Kale 1000 Headed Royal 2324",
+    "excelPackage": "50g"
+  },
+  {
+    "productId": "k176zx5z8e6twafznknf8rmtc18af2yh",
+    "productName": "Microp Planting",
+    "variantId": "jx76dgd30a7cty2qx4tg19eh9n8afcrv",
+    "packageSize": "25kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 2730,
+    "excelDescription": "Microp Planting 3448",
+    "excelPackage": "25kg"
+  },
+  {
+    "productId": "k176zx5z8e6twafznknf8rmtc18af2yh",
+    "productName": "Microp Planting",
+    "variantId": "jx7ffhznbc5c17gw0c8tpkm37h8aeeq8",
+    "packageSize": "50kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 5300,
+    "excelDescription": "Microp Planting 2647",
+    "excelPackage": "50kg"
+  },
+  {
+    "productId": "k172b2bbmqc6kd10g6tmshk9w58aegka",
+    "productName": "DAP Falcon (@160/= per Kg)",
+    "variantId": "jx76ajscpz2r4kgxajvxqrfjv58afcys",
+    "packageSize": "10kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 1300,
+    "excelDescription": "DAP Falcon 2092",
+    "excelPackage": "10kg"
+  },
+  {
+    "productId": "k178spamv8835pydq82m3wswdn8afxjy",
+    "productName": "Gradometer",
+    "variantId": "jx7ajqeytwybs9c36n24hame9n8afzdv",
+    "packageSize": "100ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 216,
+    "excelDescription": "Gradometer 1181",
+    "excelPackage": "100ml"
+  },
+  {
+    "productId": "k178spamv8835pydq82m3wswdn8afxjy",
+    "productName": "Gradometer",
+    "variantId": "jx7ay8gkn994ky71nna6z1g0ed8aehw6",
+    "packageSize": "50ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 130,
+    "excelDescription": "Gradometer 1184",
+    "excelPackage": "50ml"
+  },
+  {
+    "productId": "k1795k50ga6vktmqtw6xpyx5xh8afvw9",
+    "productName": "Confidor WG 70",
+    "variantId": "jx7cgh2hd8p0drnd2m8b7mz7ws8afq2h",
+    "packageSize": "15g",
+    "oldCostPrice": 0,
+    "newCostPrice": 220,
+    "excelDescription": "Confidor WG 70 1208",
+    "excelPackage": "15g"
+  },
+  {
+    "productId": "k175t4revhmqmnsj8yg3bfa2td8af4aw",
+    "productName": "Bamako 1097",
+    "variantId": "jx7bxxnh326k66ac1t88e5ebrd8aehgy",
+    "packageSize": "5g",
+    "oldCostPrice": 0,
+    "newCostPrice": 105,
+    "excelDescription": "Bamako 1097",
+    "excelPackage": "5g"
+  },
+  {
+    "productId": "k17erbpay6epycz07099j27apd8aepcw",
+    "productName": "Diazole Agrichem",
+    "variantId": "jx7d3ct8rv6r52q663n295q7z18afr3t",
+    "packageSize": "25ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Diazole Agrichem 1271",
+    "excelPackage": "25ml"
+  },
+  {
+    "productId": "k17egtkv340w5fxt2gszzj940n8aedy7",
+    "productName": "Bedlam 200 SL",
+    "variantId": "jx76984mnyjhszxm1aj7ntd6218aeqq5",
+    "packageSize": "15ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 95,
+    "excelDescription": "Bedlam 1108",
+    "excelPackage": "15ml"
+  },
+  {
+    "productId": "k172vyqzsc969yx6bdsnf8a8498ae5ap",
+    "productName": "CBDP Crop Booster",
+    "variantId": "jx79m6dk9ea2zk7e0r9y3zrs0h8ae83m",
+    "packageSize": "500 mls",
+    "oldCostPrice": 0,
+    "newCostPrice": 45,
+    "excelDescription": "CBDP Crop Booster 1232",
+    "excelPackage": "500 mls"
+  },
+  {
+    "productId": "k17aayjwtbh64j4qtmpafarrwn8af7b6",
+    "productName": "Easy Grow Starter Crumps",
+    "variantId": "jx7esqbhak7rrgctgha5b9fk0n8aetk2",
+    "packageSize": "120g",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Easy Grow Starter Crumps 1316",
+    "excelPackage": "120g"
+  },
+  {
+    "productId": "k17aayjwtbh64j4qtmpafarrwn8af7b6",
+    "productName": "Easy Grow Starter Crumps",
+    "variantId": "jx78118qr8qw2egae4527cjxdx8ae2qj",
+    "packageSize": "250g",
+    "oldCostPrice": 0,
+    "newCostPrice": 115,
+    "excelDescription": "Easy Grow Starter Crumps 1318",
+    "excelPackage": "250g"
+  },
+  {
+    "productId": "k172v7esfj9972mbfsr2nwjt858afpx3",
+    "productName": "Easy Grow Vegetative",
+    "variantId": "jx78m1zz60556gwwa6f8wj4xp18aftnv",
+    "packageSize": "120g",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Easy Grow Vegetative 1320",
+    "excelPackage": "120G"
+  },
+  {
+    "productId": "k17fszdf4d5st9akge6bazcvks8af0mj",
+    "productName": "Finisher Pellets UNGA",
+    "variantId": "jx7f8esr1cr2f03n8abagpz6gh8afqvp",
+    "packageSize": "10kgs",
+    "oldCostPrice": 0,
+    "newCostPrice": 850,
+    "excelDescription": "Finisher Pellets UNGA 2605",
+    "excelPackage": "10kgs"
+  },
+  {
+    "productId": "k174g7xrn33sxnetczzfnc5qwd8aer93",
+    "productName": "Kienyeji Mash Royal",
+    "variantId": "jx7f2hxg1ye4kw5vt4g4w933g18afa8h",
+    "packageSize": "10kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 450,
+    "excelDescription": "Kienyeji Mash Royal 2100",
+    "excelPackage": "10kg"
+  },
+  {
+    "productId": "k174g7xrn33sxnetczzfnc5qwd8aer93",
+    "productName": "Kienyeji Mash Royal",
+    "variantId": "jx7292xmk6pzzxths59zmnn4nh8af22g",
+    "packageSize": "20kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 850,
+    "excelDescription": "Kienyeji Mash Royal 2101",
+    "excelPackage": "20kg"
+  },
+  {
+    "productId": "k174g7xrn33sxnetczzfnc5qwd8aer93",
+    "productName": "Kienyeji Mash Royal",
+    "variantId": "jx7cnpzy5crsq6qqd790mvt3yx8afxd1",
+    "packageSize": "70kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 2850,
+    "excelDescription": "Kienyeji Mash Royal 2099",
+    "excelPackage": "70kg"
+  },
+  {
+    "productId": "k17ams69yck84q5ps2pjccheqs8ae6gx",
+    "productName": "S-Dime",
+    "variantId": "jx7az867ewwr3pq67zwygwmqyh8ae06a",
+    "packageSize": "125ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 190,
+    "excelDescription": "S-Dime 1790",
+    "excelPackage": "125ml"
+  },
+  {
+    "productId": "k17agabaj5d98h0ps2gj0r7z3s8afxym",
+    "productName": "Ultramix Maziwa Block",
+    "variantId": "jx7dqpt61e35myqfr3b6fb4c0h8aes98",
+    "packageSize": "2kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 225,
+    "excelDescription": "Ultramix Maziwa Block 5438",
+    "excelPackage": "2kg"
+  },
+  {
+    "productId": "k17agabaj5d98h0ps2gj0r7z3s8afxym",
+    "productName": "Ultramix Maziwa Block",
+    "variantId": "jx7dqpt61e35myqfr3b6fb4c0h8aes98",
+    "packageSize": "2kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 182,
+    "excelDescription": "Ultramix Maziwa 3213",
+    "excelPackage": "2kg"
+  },
+  {
+    "productId": "k1799akww5y34q7qg0gyrsmnes8aexzg",
+    "productName": "Maclik Bricks( Mineral Brick 2kg Cooper)",
+    "variantId": "jx7c99q9d38sh5ha3e5b3907h98aejvf",
+    "packageSize": "2kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 275,
+    "excelDescription": "Maclik Bricks 2301",
+    "excelPackage": "2kg"
+  },
+  {
+    "productId": "k178k2rg5qab2zaa12mwsz5ddh8ae34n",
+    "productName": "Managu Continental",
+    "variantId": "jx7cvf2qjw0rdyn6x19r3yvbh58ae9bn",
+    "packageSize": "50g",
+    "oldCostPrice": 0,
+    "newCostPrice": 210,
+    "excelDescription": "Managu Continental 3371",
+    "excelPackage": "50g"
+  },
+  {
+    "productId": "k17ftsshhww0ab9hncmkeast0d8ae3ya",
+    "productName": "Duodip 55% EC",
+    "variantId": "jx79fvdj2md4n7qr0m9zpa9gn98aedwq",
+    "packageSize": "20ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 147,
+    "excelDescription": "Duodip 55% EC 0787",
+    "excelPackage": "20ml"
+  },
+  {
+    "productId": "k174yhdtw6w8pn354j7jecwax58af27w",
+    "productName": "Sypertix",
+    "variantId": "jx70nsv6pkbew8dh8ahfy3zztd8aegfh",
+    "packageSize": "20ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 95,
+    "excelDescription": "Sypertix 2393",
+    "excelPackage": "20ml"
+  },
+  {
+    "productId": "k17f82rgwqvr0p7364gr6rvc7d8aerpv",
+    "productName": "Kaolin Laibuta",
+    "variantId": "jx78sr14ztzr0z4jz1zk6fjj7x8aec75",
+    "packageSize": "100g",
+    "oldCostPrice": 0,
+    "newCostPrice": 45,
+    "excelDescription": "Kaolin Laibuta 4387",
+    "excelPackage": "100g"
+  },
+  {
+    "productId": "k175rmg1c8fj6v3a5914fa8x8h8afgzq",
+    "productName": "Ex Kupe",
+    "variantId": "jx75m7r2sq0kc77kthf17gbr3x8afhxg",
+    "packageSize": "20ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 80,
+    "excelDescription": "Ex Kupe 4764",
+    "excelPackage": "20ml"
+  },
+  {
+    "productId": "k17ahfy3w49fas5k7mss2ps14d8af9q6",
+    "productName": "Levafas Extra",
+    "variantId": "jx796dazbe24q1q1fmnzx9b2pd8afx50",
+    "packageSize": "40ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 132,
+    "excelDescription": "Levafas Extra 1501",
+    "excelPackage": "40ml"
+  },
+  {
+    "productId": "k17943jfr2q2251zq7n9bxq2fd8aee9e",
+    "productName": "Dabendazole 2.5% Dawa",
+    "variantId": "jx7cpqzav67msp4pdbx9xec3bs8afbkg",
+    "packageSize": "120ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 40,
+    "excelDescription": "Dabendazole 2.5% Dawa 0628",
+    "excelPackage": "120ml"
+  },
+  {
+    "productId": "k17943jfr2q2251zq7n9bxq2fd8aee9e",
+    "productName": "Dabendazole 2.5% Dawa",
+    "variantId": "jx79et39gbcs3gkykcqe71mb298aefy8",
+    "packageSize": "500ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 110,
+    "excelDescription": "Dabendazole 2.5% Dawa 0630",
+    "excelPackage": "500mls"
+  },
+  {
+    "productId": "k170smrrkhc3r9whw94v3a2wch8ae07a",
+    "productName": "Eye Wound Powder Metrocycline",
+    "variantId": "jx768754hwfs6qfbxc4crwjevh8afs1t",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 100,
+    "excelDescription": "Eye Wound Powder Metrocycline 1018",
+    "excelPackage": "25g"
+  },
+  {
+    "productId": "k17b44wgtq3mgj5yv3gpycfqs58aedda",
+    "productName": "Wormitrex",
+    "variantId": "jx72chxwywb9s3k08ab0rs4tv98aep3k",
+    "packageSize": "125ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 55,
+    "excelDescription": "Wormitrex 2574",
+    "excelPackage": "125ml"
+  },
+  {
+    "productId": "k17d4s1vva4haqxbcpq8nmtge98ae0jm",
+    "productName": "Sevin Dudu Dust",
+    "variantId": "jx7306hhz9q434y006qds8bcf98aescz",
+    "packageSize": "100g",
+    "oldCostPrice": 0,
+    "newCostPrice": 80,
+    "excelDescription": "Sevin Dudu Dust 2184",
+    "excelPackage": "100g"
+  },
+  {
+    "productId": "k17d4s1vva4haqxbcpq8nmtge98ae0jm",
+    "productName": "Sevin Dudu Dust",
+    "variantId": "jx7d2mfw3mz5gv064p1gjaavxs8aeghq",
+    "packageSize": "200g",
+    "oldCostPrice": 0,
+    "newCostPrice": 105,
+    "excelDescription": "Sevin Dudu Dust 2185",
+    "excelPackage": "200g"
+  },
+  {
+    "productId": "k172nj8nvfqn8fv908vqhc0b9s8aesdf",
+    "productName": "Trevin Dudu Dust",
+    "variantId": "jx70h962y813bepzeedcyngr098aep2b",
+    "packageSize": "100g",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Trevin Dudu Dust KE20UU",
+    "excelPackage": "100g"
+  },
+  {
+    "productId": "k17d4s1vva4haqxbcpq8nmtge98ae0jm",
+    "productName": "Sevin Dudu Dust",
+    "variantId": "jx77ke7stmv74yby91np4qf2ms8aex1m",
+    "packageSize": "50g",
+    "oldCostPrice": 0,
+    "newCostPrice": 60,
+    "excelDescription": "Sevin Dudu Dust 2186",
+    "excelPackage": "50g"
+  },
+  {
+    "productId": "k1776ntztpf9vva6fvscfhz8dh8af6tf",
+    "productName": "Capo-Vit Liquid",
+    "variantId": "jx791a4j4yv7bra02bpew7r6758aervh",
+    "packageSize": "100ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 105,
+    "excelDescription": "Capo-Vit Liquid 4795",
+    "excelPackage": "100ml"
+  },
+  {
+    "productId": "k173y0t196nzwx2jajwj8zr7ys8afhex",
+    "productName": "WSL Chlorine Powder",
+    "variantId": "jx78w8hyr6vh7bvzyzwy4fsrnn8aeye9",
+    "packageSize": "100g",
+    "oldCostPrice": 0,
+    "newCostPrice": 135,
+    "excelDescription": "WSL Chlorine Powder 2785",
+    "excelPackage": "100g"
+  },
+  {
+    "productId": "k1797t748dgemw04ssjreb1dnn8afzej",
+    "productName": "Drinkers Pharmplan",
+    "variantId": "jx73tvw59aaznr172c20a9hgc98afgdv",
+    "packageSize": "1.5lts",
+    "oldCostPrice": 0,
+    "newCostPrice": 155,
+    "excelDescription": "Drinkers Pharmplan 2277",
+    "excelPackage": "1.5lts"
+  },
+  {
+    "productId": "k1797t748dgemw04ssjreb1dnn8afzej",
+    "productName": "Drinkers Pharmplan",
+    "variantId": "jx7ckynvsq23yscgvfkw3nze918afbt5",
+    "packageSize": "3.5lts",
+    "oldCostPrice": 0,
+    "newCostPrice": 300,
+    "excelDescription": "Drinkers Pharmplan 4353",
+    "excelPackage": "3.5lts"
+  },
+  {
+    "productId": "k17eqq9r96ky5gef2ra65e3fy58afrwq",
+    "productName": "Feeder Pharmplan",
+    "variantId": "jx7cr5twb6bmxn4aj85gqcg2kd8afbnv",
+    "packageSize": "1.5kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 165,
+    "excelDescription": "Feeder Pharmplan 4355",
+    "excelPackage": "1.5kg"
+  },
+  {
+    "productId": "k178n8kr1nfcc1nt3bbsbp4kx58aek4t",
+    "productName": "Pigeon Hole Feeder",
+    "variantId": "jx73rytj5f1qk15ay2rqvhk6718afz4f",
+    "packageSize": "Big",
+    "oldCostPrice": 0,
+    "newCostPrice": 150,
+    "excelDescription": "Pigeon Hole Feeder 4564",
+    "excelPackage": "Big"
+  },
+  {
+    "productId": "k17aana0sd3az1x2x3d1h3s7bx8afvte",
+    "productName": "DK 8031",
+    "variantId": "jx77w7h7hw1tcfeqsf832y18m98afyax",
+    "packageSize": "2kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 780,
+    "excelDescription": "DK 8031 - 1275",
+    "excelPackage": "2kg"
+  },
+  {
+    "productId": "k175dd433n2qqnh753fxa79s3d8af48h",
+    "productName": "DK 777",
+    "variantId": "jx701nggw74jqaspnhp5srqsqx8af1pa",
+    "packageSize": "2kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 850,
+    "excelDescription": "DK 777 - 1274",
+    "excelPackage": "2kg"
+  },
+  {
+    "productId": "k17164bxzmd3vj66ftj13r90z98af3j5",
+    "productName": "DK 7500 Yellow Maize",
+    "variantId": "jx7datny1t3z7wg020cgd452sh8af07v",
+    "packageSize": "2kg",
+    "oldCostPrice": 0,
+    "newCostPrice": 960,
+    "excelDescription": "DK 7500 Yellow Maize - 6479",
+    "excelPackage": "2kg"
+  },
+  {
+    "productId": "k170k6banz5x27y58tshhfz1pd8aez7t",
+    "productName": "Chick Start Vetcare",
+    "variantId": "jx752mzn8j9z0k5yer2p9zbn5x8afhhh",
+    "packageSize": "30g",
+    "oldCostPrice": 0,
+    "newCostPrice": 50,
+    "excelDescription": "Chick Start Vetcare 0497",
+    "excelPackage": "30g"
+  },
+  {
+    "productId": "k178n8kr1nfcc1nt3bbsbp4kx58aek4t",
+    "productName": "Pigeon Hole Feeder",
+    "variantId": "jx71pf6knxfj5pr7ax08mm0vsd8aevvw",
+    "packageSize": "Small",
+    "oldCostPrice": 0,
+    "newCostPrice": 80,
+    "excelDescription": "Pigeon Hole Feeder 4571",
+    "excelPackage": "Small"
+  },
+  {
+    "productId": "k17a4yd8jr225qxv7ka1xy88sn8afwpx",
+    "productName": "Egocin Chick Formula",
+    "variantId": "jx7b4pa6993vdk0vhssf0ev9ph8af8s6",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 30,
+    "excelDescription": "Egocin Chick Formula 1330",
+    "excelPackage": "25g"
+  },
+  {
+    "productId": "k176vnmwtdpew3m7d4g5xbh17n8aewag",
+    "productName": "Vetoxy 20%",
+    "variantId": "jx7egh3x0qbn9efz08ys7zp78n8aejcn",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 55,
+    "excelDescription": "Vetoxy 20% 2692",
+    "excelPackage": "25g"
+  },
+  {
+    "productId": "k178nsbv8jymchp1zqkw6kv7n18ae6nb",
+    "productName": "Cosmycin 20%",
+    "variantId": "jx7e287pvcd8wwcnnsrdrqhje98aep1b",
+    "packageSize": "30g",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Cosmycin 20% 5784",
+    "excelPackage": "30g"
+  },
+  {
+    "productId": "k179ntqy4fxrk7w9gw34wej0y98aex82",
+    "productName": "Cosatrim Vet",
+    "variantId": "jx7b7dx3zjgbj50sqgpdd78h2n8afv3t",
+    "packageSize": "30g",
+    "oldCostPrice": 0,
+    "newCostPrice": 100,
+    "excelDescription": "Cosatrim 5785",
+    "excelPackage": "30g"
+  },
+  {
+    "productId": "k17c8zm1qqmnrmct8gpd5txzjs8ae3vq",
+    "productName": "Cosvita",
+    "variantId": "jx7dm0j27d19s2b1hddrd7p8ps8af1ac",
+    "packageSize": "30g",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Cosvita 0579",
+    "excelPackage": "30g"
+  },
+  {
+    "productId": "k1754twg6hwed79fqkfzb06j5d8af5as",
+    "productName": "Ovin",
+    "variantId": "jx71e9g1qxwzn06bn4678v4y898ae35s",
+    "packageSize": "20g",
+    "oldCostPrice": 0,
+    "newCostPrice": 90,
+    "excelDescription": "Ovin 3163",
+    "excelPackage": "20g"
+  },
+  {
+    "productId": "k1796exe5v1a0vh43vzfm1xaxh8aebks",
+    "productName": "Wormicid",
+    "variantId": "jx7enjghne6p1t4jard2jjdza58af9ec",
+    "packageSize": "150mg",
+    "oldCostPrice": 0,
+    "newCostPrice": 3,
+    "excelDescription": "Wormicid 2009",
+    "excelPackage": "150mg"
+  },
+  {
+    "productId": "k17azy8wrym7yv7a6dmmx7jqas8ae6pn",
+    "productName": "Biotrim Vet Plus",
+    "variantId": "jx779vyqmzydfs0fx5c3xtf7258afrwd",
+    "packageSize": "30g",
+    "oldCostPrice": 0,
+    "newCostPrice": 105,
+    "excelDescription": "Biotrim Vet 1137",
+    "excelPackage": "30g"
+  },
+  {
+    "productId": "k17906pqc26axxsgryr9wq0q658afp14",
+    "productName": "Metrocycline Soluble",
+    "variantId": "jx79gkyrdex221qz09b7f5bprh8af10a",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 70,
+    "excelDescription": "Metrocycline Soluble 1627",
+    "excelPackage": "25g"
+  },
+  {
+    "productId": "k179xwg7f42hnrswah5t6jgbzh8affgz",
+    "productName": "Liquid Paraffin (Impact)",
+    "variantId": "jx7712tgx0nsf3ewyqx1fk2njd8afx1g",
+    "packageSize": "100mls",
+    "oldCostPrice": 0,
+    "newCostPrice": 70,
+    "excelDescription": "Liquid Paraffin (Impact) 6477",
+    "excelPackage": "100mls"
+  },
+  {
+    "productId": "k179xwg7f42hnrswah5t6jgbzh8affgz",
+    "productName": "Liquid Paraffin (Impact)",
+    "variantId": "jx7ajbzg97qaz2r0tq0hdpwa2d8aeebf",
+    "packageSize": "50ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 40,
+    "excelDescription": "Liquid Paraffin (Impact) 6476",
+    "excelPackage": "50ml"
+  },
+  {
+    "productId": "k172356bfxstjh3xxk3qabnhc98ae8m1",
+    "productName": "Biosafe",
+    "variantId": "jx794vhfjp36d19dqkn66h9xz58afgg9",
+    "packageSize": "100ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 105,
+    "excelDescription": "Biosafe 2615",
+    "excelPackage": "100ml"
+  },
+  {
+    "productId": "k17a4pv4taj1vpgrjx9dywyv018afpf2",
+    "productName": "Kerol",
+    "variantId": "jx76zfps5h1txtbhbh7qrvn5y98af1bh",
+    "packageSize": "250ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 370,
+    "excelDescription": "Kerol 1446",
+    "excelPackage": "250ml"
+  },
+  {
+    "productId": "k172svmy28q9v78375e0p57z358afqp2",
+    "productName": "Actellic Super",
+    "variantId": "jx76hbm4wrve5123a5rte6fgqd8aet33",
+    "packageSize": "100g",
+    "oldCostPrice": 0,
+    "newCostPrice": 132,
+    "excelDescription": "Actellic Super 1012",
+    "excelPackage": "100g"
+  },
+  {
+    "productId": "k17arc9r5rx9j8yjv4p1em9w8n8afngf",
+    "productName": "Skana Super",
+    "variantId": "jx79yegzehqb8x0303as2vpxnh8aefjx",
+    "packageSize": "100g",
+    "oldCostPrice": 0,
+    "newCostPrice": 60,
+    "excelDescription": "Skana Super 1800",
+    "excelPackage": "100g"
+  },
+  {
+    "productId": "k178wc7zrhah5zch35jpjm6xgn8afv0c",
+    "productName": "Milking Salve Norbrook",
+    "variantId": "jx78gm967f41n62yd6ba60me898aerjx",
+    "packageSize": "100g",
+    "oldCostPrice": 0,
+    "newCostPrice": 84,
+    "excelDescription": "Milking Salve Norbrook 1647",
+    "excelPackage": "100g"
+  },
+  {
+    "productId": "k17cqh1gnmmqrt81v1pph10zz98af8j6",
+    "productName": "Albafas 2.5%",
+    "variantId": "jx79k6k28bas5tyt92bf7pvx8h8aek4c",
+    "packageSize": "120ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Albafas 2.5% 1045",
+    "excelPackage": "120ml"
+  },
+  {
+    "productId": "k17cqh1gnmmqrt81v1pph10zz98af8j6",
+    "productName": "Albafas 2.5%",
+    "variantId": "jx79k6k28bas5tyt92bf7pvx8h8aek4c",
+    "packageSize": "120ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 62,
+    "excelDescription": "Albafas 2.5% 0136",
+    "excelPackage": "120ml"
+  },
+  {
+    "productId": "k17cqh1gnmmqrt81v1pph10zz98af8j6",
+    "productName": "Albafas 2.5%",
+    "variantId": "jx70kf9fvtbg2mjg7ek09tw2cx8af8qz",
+    "packageSize": "500mls",
+    "oldCostPrice": 0,
+    "newCostPrice": 160,
+    "excelDescription": "Albafas 2.5% 1048",
+    "excelPackage": "500mls"
+  },
+  {
+    "productId": "k17cqh1gnmmqrt81v1pph10zz98af8j6",
+    "productName": "Albafas 2.5%",
+    "variantId": "jx77xwrbc94z6jqfqf01vw4pfd8afj1b",
+    "packageSize": "40ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 44,
+    "excelDescription": "Albafas 2.5% 0138",
+    "excelPackage": "40ml"
+  },
+  {
+    "productId": "k17ctmgq2da89dsq8ncc3vz1j18afan2",
+    "productName": "Albendex 2.5% Vetcare",
+    "variantId": "jx75jwp4rgazbnbmnnjmbz3mfd8afh6w",
+    "packageSize": "120ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 65,
+    "excelDescription": "Albendex 2.5% 1045",
+    "excelPackage": "120ml"
+  },
+  {
+    "productId": "k17ctmgq2da89dsq8ncc3vz1j18afan2",
+    "productName": "Albendex 2.5% Vetcare",
+    "variantId": "jx75jwp4rgazbnbmnnjmbz3mfd8afh6w",
+    "packageSize": "120ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 30,
+    "excelDescription": "Albendex 2.5% Vetcare 0177",
+    "excelPackage": "120ml"
+  },
+  {
+    "productId": "k17ctmgq2da89dsq8ncc3vz1j18afan2",
+    "productName": "Albendex 2.5% Vetcare",
+    "variantId": "jx7d9e64qe189e1jevj1wc0bzh8af1nr",
+    "packageSize": "500mls",
+    "oldCostPrice": 0,
+    "newCostPrice": 140,
+    "excelDescription": "Albendex 2.5% Vetcare 0179",
+    "excelPackage": "500mls"
+  },
+  {
+    "productId": "k172tw9yhftwa5kyts77rdqn098aeqz6",
+    "productName": "Triatix",
+    "variantId": "jx7a717femr0adqk7pzkegxf898aeb2w",
+    "packageSize": "40ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 140,
+    "excelDescription": "Triatix 1947",
+    "excelPackage": "40ml"
+  },
+  {
+    "productId": "k172tw9yhftwa5kyts77rdqn098aeqz6",
+    "productName": "Triatix",
+    "variantId": "jx7fstdg1j3yzeh251exfavf558aevh8",
+    "packageSize": "20ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 100,
+    "excelDescription": "Triatix 1946",
+    "excelPackage": "20ml"
+  },
+  {
+    "productId": "k17d4dcwqk1v8pbc3srbjfxmjh8aehnq",
+    "productName": "Tixfix",
+    "variantId": "jx750w68fhhsk170t5ps6s90k98aec2t",
+    "packageSize": "100ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 190,
+    "excelDescription": "Tixfix 2464",
+    "excelPackage": "100ml"
+  },
+  {
+    "productId": "k17br7bzaqr7y4tbcnyewyw4e58af5pv",
+    "productName": "Red Cat",
+    "variantId": "jx7fmtmah9srmxnyfa4st5nndx8aeqyz",
+    "packageSize": "10g",
+    "oldCostPrice": 0,
+    "newCostPrice": 11,
+    "excelDescription": "Red Cat 2377",
+    "excelPackage": "10g"
+  },
+  {
+    "productId": "k17b4km4qwb0j4qg4hbfea9r798aekfg",
+    "productName": "Baraki Rat Pellets",
+    "variantId": "jx78721b41g4a25n94f5tyztg98aekvp",
+    "packageSize": "10g",
+    "oldCostPrice": 0,
+    "newCostPrice": 40,
+    "excelDescription": "Baraki Rat Pellets 1099",
+    "excelPackage": "10g"
+  },
+  {
+    "productId": "k17bd0rrm31n7hggkvbsh96sph8afy5r",
+    "productName": "Ratbomb",
+    "variantId": "jx7fmce3f91b635gb5t23ss51x8afzpx",
+    "packageSize": "10g",
+    "oldCostPrice": 0,
+    "newCostPrice": 35,
+    "excelDescription": "Ratbomb 3099",
+    "excelPackage": "10g"
+  },
+  {
+    "productId": "k1765pm9rjw6q9mq3bpb60fjt58aegsq",
+    "productName": "Fuko kill",
+    "variantId": "jx7ftnptz0715mdm4q838kav0h8aeyv6",
+    "packageSize": "25g",
+    "oldCostPrice": 0,
+    "newCostPrice": 77,
+    "excelDescription": "Fuko kill 1370",
+    "excelPackage": "25g"
+  },
+  {
+    "productId": "k176by4rhjm90s2az04ac5qs1h8ae1ad",
+    "productName": "Oshothion",
+    "variantId": "jx78pa8gp5t4k304375pecprp18af8tz",
+    "packageSize": "100ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 118,
+    "excelDescription": "Oshothion 1639",
+    "excelPackage": "100ml"
+  },
+  {
+    "productId": "k17d0y6rw8pty3p5wem5ag5vpn8ae7ma",
+    "productName": "Bimatraz",
+    "variantId": "jx75xrpj68m31bxx6vq3g1pe8x8aeptf",
+    "packageSize": "20ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 110,
+    "excelDescription": "Bimatraz 5272",
+    "excelPackage": "20ml"
+  },
+  {
+    "productId": "k176fj3p72h70xzvzhybfh240s8aeyzy",
+    "productName": "Undertaker",
+    "variantId": "jx70da5eze63e0ttdsnm3vnw2d8aeakn",
+    "packageSize": "100ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 230,
+    "excelDescription": "Undertaker 2585",
+    "excelPackage": "100ml"
+  },
+  {
+    "productId": "k17bdq66a0r3pw9qfdex1ghe2d8aegvd",
+    "productName": "Norotraz",
+    "variantId": "jx7cpd5zq93cngkda9b7e8n88n8afgez",
+    "packageSize": "40ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 108,
+    "excelDescription": "Norotraz 1821",
+    "excelPackage": "40ml"
+  },
+  {
+    "productId": "k176fj3p72h70xzvzhybfh240s8aeyzy",
+    "productName": "Undertaker",
+    "variantId": "jx763bq680es2n2can3heneemh8afpd4",
+    "packageSize": "50ml",
+    "oldCostPrice": 0,
+    "newCostPrice": 130,
+    "excelDescription": "Undertaker 2586",
+    "excelPackage": "50ml"
+  },
+  {
+    "productId": "k17cvddnt2jz8ndn6vnqv0915h8afww5",
+    "productName": "Zetanil",
+    "variantId": "jx75dyp8k0pkejyq4gchzjw0vd8af568",
+    "packageSize": "40g",
+    "oldCostPrice": 0,
+    "newCostPrice": 105,
+    "excelDescription": "Zetanil 2608",
+    "excelPackage": "40g"
+  }
+]

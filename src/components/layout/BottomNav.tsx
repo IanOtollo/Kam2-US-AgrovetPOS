@@ -12,9 +12,7 @@ import {
   LogOut,
   MoreHorizontal,
   X,
-  Wallet,
-  ShoppingBag,
-  Truck
+  Wallet
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { useAuth } from "../../hooks/useAuth";
@@ -24,11 +22,9 @@ const allAdminItems = [
   { label: "Dashboard", icon: LayoutDashboard, path: "/" },
   { label: "Products", icon: Package, path: "/products" },
   { label: "Inventory", icon: Boxes, path: "/inventory" },
-  { label: "Purchases", icon: ShoppingBag, path: "/purchases" },
   { label: "Sales", icon: Receipt, path: "/sales" },
   { label: "POS", icon: ShoppingCart, path: "/pos", center: true },
-  { label: "Expenditure", icon: Wallet, path: "/expenses" },
-  { label: "Suppliers", icon: Truck, path: "/suppliers" },
+  { label: "Expenditure", icon: Wallet, path: "/expenditure" },
   { label: "Customers", icon: Users, path: "/customers" },
   { label: "Reports", icon: BarChart3, path: "/reports" },
   { label: "Settings", icon: Settings, path: "/settings" },
@@ -50,9 +46,7 @@ const mobileCashierPrimaryItems = [
 const moreItems = [
   { label: "Customers", icon: Users, path: "/customers", adminOnly: false },
   { label: "Inventory", icon: Boxes, path: "/inventory", adminOnly: false },
-  { label: "Expenditure", icon: Wallet, path: "/expenses", adminOnly: true },
-  { label: "Purchases", icon: ShoppingBag, path: "/purchases", adminOnly: true },
-  { label: "Suppliers", icon: Truck, path: "/suppliers", adminOnly: true },
+  { label: "Expenditure", icon: Wallet, path: "/expenditure", adminOnly: true },
   { label: "Reports", icon: BarChart3, path: "/reports", adminOnly: true },
   { label: "Settings", icon: Settings, path: "/settings", adminOnly: true },
 ];

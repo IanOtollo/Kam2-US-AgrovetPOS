@@ -11,6 +11,9 @@ import { CustomersPage } from "./pages/CustomersPage";
 import { ReportsPage } from "./pages/ReportsPage";
 import { SettingsPage } from "./pages/SettingsPage";
 import { NotAuthorized } from "./pages/NotAuthorized";
+import { ExpensesPage } from "./pages/ExpensesPage";
+import { PurchasesPage } from "./pages/PurchasesPage";
+import { SuppliersPage } from "./pages/SuppliersPage";
 
 function ProtectedRoute({ children, adminOnly = false }: { children: React.ReactNode; adminOnly?: boolean }) {
   const { user, isLoading, isAdmin } = useAuth();
@@ -39,6 +42,9 @@ export default function App() {
       <Route path="/inventory" element={<ProtectedRoute adminOnly><InventoryPage /></ProtectedRoute>} />
       <Route path="/sales" element={<ProtectedRoute><SalesPage /></ProtectedRoute>} />
       <Route path="/customers" element={<ProtectedRoute><CustomersPage /></ProtectedRoute>} />
+      <Route path="/expenses" element={<ProtectedRoute adminOnly><ExpensesPage /></ProtectedRoute>} />
+      <Route path="/purchases" element={<ProtectedRoute adminOnly><PurchasesPage /></ProtectedRoute>} />
+      <Route path="/suppliers" element={<ProtectedRoute adminOnly><SuppliersPage /></ProtectedRoute>} />
       <Route path="/reports" element={<ProtectedRoute adminOnly><ReportsPage /></ProtectedRoute>} />
       <Route path="/settings" element={<ProtectedRoute adminOnly><SettingsPage /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to={user ? (user.role === "admin" ? "/" : "/pos") : "/login"} replace />} />
